@@ -1,7 +1,17 @@
+import { Route, Routes } from "react-router";
 import "./App.css";
+import Header from "./components/header/header.component";
+import Home from "./pages/home/home.component";
 
-function App() {
-  return <div>Dacar</div>;
-}
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
+    </>
+  );
+};
 
 export default App;
