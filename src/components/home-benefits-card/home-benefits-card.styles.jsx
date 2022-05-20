@@ -9,7 +9,7 @@ export const BenefitsCardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 560px;
+  min-height: 460px;
   background-color: red;
   margin: 15px;
   background: linear-gradient(
@@ -44,7 +44,7 @@ export const BenefitsCardTitle = styled.h2`
 `;
 
 export const BenefitsCardDescr = styled.p`
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
   color: #515151;
 `;

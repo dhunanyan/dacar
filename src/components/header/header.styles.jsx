@@ -75,6 +75,7 @@ export const HeaderNav = styled.ul`
 
 export const HeaderItem = styled.li`
   margin: 0 5px;
+  padding: 8px 15px;
 
   &:last-of-type {
     margin: 0 0 0 5px;
@@ -82,8 +83,27 @@ export const HeaderItem = styled.li`
 `;
 
 export const HeaderLink = styled(Link)`
-  padding: 8px 15px;
   color: #ededed;
   font-size: 20px;
   font-weight: 700;
+  position: relative;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 4px;
+    width: 0%;
+    background: linear-gradient(135deg, #74d680, #67a26f);
+    transition: all 200ms ease-out;
+    border-radius: 1px;
+  }
 `;

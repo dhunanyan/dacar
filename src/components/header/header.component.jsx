@@ -44,19 +44,19 @@ const Header = () => {
 
         <HeaderNav>
           <HeaderItem>
-            <HeaderLink to="#">Praca</HeaderLink>
+            <HeaderLink to="/work">Praca</HeaderLink>
           </HeaderItem>
 
           <HeaderItem>
-            <HeaderLink to="#">Oferta</HeaderLink>
+            <HeaderLink to="/offer">Oferta</HeaderLink>
           </HeaderItem>
 
           <HeaderItem>
-            <HeaderLink to="#">Pojazdy</HeaderLink>
+            <HeaderLink to="/vehicles">Pojazdy</HeaderLink>
           </HeaderItem>
 
           <HeaderItem>
-            <HeaderLink to="#">Kontakt</HeaderLink>
+            <HeaderLink to="/contact">Kontakt</HeaderLink>
           </HeaderItem>
         </HeaderNav>
       </HeaderContainer>

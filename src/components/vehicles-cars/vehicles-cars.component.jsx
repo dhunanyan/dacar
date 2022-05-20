@@ -1,18 +1,14 @@
 import React from "react";
-import BenefitsCard from "../benefits-card/benefits-card.component";
+import BenefitsCard from "../home-benefits-card/home-benefits-card.component";
 
-import BenefitsCardData from "./benefits.data";
+import BenefitsCardData from "./home-benefits.data";
 import {
   BenefitsCards,
-  BenefitsCircle1,
-  BenefitsCircle2,
-  BenefitsCircle3,
-  BenefitsCircle4,
   BenefitsContainer,
   BenefitsWrapper,
-} from "./benefits.styles";
+} from "./home-benefits.styles";
 
-const Benefits = () => {
+const Cars = () => {
   return (
     <BenefitsWrapper>
       <BenefitsContainer>
@@ -27,13 +23,8 @@ const Benefits = () => {
           ))}
         </BenefitsCards>
       </BenefitsContainer>
-
-      <BenefitsCircle1 />
-      <BenefitsCircle2 />
-      <BenefitsCircle3 />
-      <BenefitsCircle4 />
     </BenefitsWrapper>
   );
 };
 
-export default Benefits;
+export default Cars;
