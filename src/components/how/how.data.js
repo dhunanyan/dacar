@@ -118,6 +118,67 @@ const HOW_DATA = {
       },
     ],
   },
+  "free-now": {
+    name: "free-now",
+    title: "Jak zostać kierowcą FreeNow?",
+    list: [
+      {
+        id: 1,
+        subtitle: "ZAREJESTRUJ SIĘ",
+        descr:
+          "Zacznij od rejestracji na stronie Dacar Partner i wypełnij wszystkie swoje dane.",
+        subList: [],
+        url: "",
+      },
+      {
+        id: 2,
+        subtitle: "PRZEŚLIJ WYMAGANE DOKUMENTY",
+        descr:
+          "Dodaj wybrane umowy, które są niezbędne do rozpoczęcia współpracy.",
+        subList: [],
+        url: "",
+      },
+      {
+        id: 3,
+        subtitle: "WYKONAJ BADANIA I TESTY",
+        descr:
+          "Wykonaj badania lekarskie i psychotesty, jeśli wcześniej tego nie zrobiłeś/aś. Kierowca Free Now koniecznie musi mieć badania i testy, które są wymagane do pracy. Bez nich utworzenie konta jest niemożliwe.",
+        subList: [],
+        url: "",
+      },
+      {
+        id: 4,
+        subtitle: "ZAPISZ SIĘ NA SZKOLENIE",
+        descr: "Zapisz się na szkolenie",
+        subList: [],
+        url: "",
+      },
+      {
+        id: 5,
+        subtitle: "OCZEKUJ NA KONTAKT",
+        descr:
+          "Poczekaj na kontakt ze strony FreeNow. Na szkoleniu podpiszesz umowy i założysz konto kierowcy.",
+        subList: [],
+        url: "",
+      },
+      {
+        id: 6,
+        subtitle: "PRZYGOTUJ POJAZD",
+        descr:
+          "Dostosuj swoje auto do wymagań odnośnie oznakowania TAXI. Na podstawie badań oraz wpisu w dowodzie rejestracyjnym otrzymasz od nas upoważnienie do wyrobienia wypisu z naszej licencji, który pozwoli Ci legalnie pracować.",
+        subList: [],
+        url: "",
+      },
+      {
+        id: 7,
+        subtitle: "ZARABIAJ!",
+        descr:
+          "Gratulacje! Jesteś gotowy do pracy jako kierowca Free Now i możesz wykonywać pierwsze kursy. Połącz swoje zarobki z innymi aplikacjami jak Uber czy Bolt, aby zarabiać więcej!",
+        subList: [],
+        url: "",
+      },
+    ],
+  },
 };
 
 export default HOW_DATA;
