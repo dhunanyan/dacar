@@ -10,6 +10,31 @@ export const BenefitsContainer = styled.div`
   max-width: 1300px;
   margin: 0 auto;
   padding: 30px;
+  position: relative;
+`;
+
+export const BenefitsTitle = styled.h1`
+  font-size: 56px;
+  font-weight: 500;
+  color: #d0d0d0;
+  text-align: center;
+  margin: 30px auto 45px auto;
+  text-transform: uppercase;
+  position: relative;
+  width: max-content;
+  z-index: 5;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60%;
+    height: 6px;
+    background: #d0d0d0;
+    border-radius: 10px;
+  }
 `;
 
 export const BenefitsCards = styled.div`
@@ -32,16 +57,16 @@ export const BenefitsCircle1 = styled.div`
   ${BenefitsCircle}
   width: 450px;
   height: 450px;
-  top: 40px;
-  left: 100px;
+  top: 140px;
+  left: 70px;
 `;
 
 export const BenefitsCircle2 = styled.div`
   ${BenefitsCircle}
   width: 350px;
   height: 350px;
-  bottom: 480px;
-  right: 350px;
+  bottom: 300px;
+  right: 200px;
 `;
 
 export const BenefitsCircle3 = styled.div`

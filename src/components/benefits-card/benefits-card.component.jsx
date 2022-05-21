@@ -4,7 +4,7 @@ import {
   BenefitsCardDescr,
   BenefitsCardIcon,
   BenefitsCardTitle,
-} from "./home-benefits-card.styles";
+} from "./benefits-card.styles";
 
 const BenefitsCard = ({ title, descr, icon }) => {
   return (

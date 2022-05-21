@@ -1,3 +1,4 @@
+import { Grow } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -12,7 +13,7 @@ export const HeaderWrapper = styled.header`
   box-shadow: -1px 3px 5px -3px rgba(0, 0, 0, 0.75);
   transition: all 150ms ease-out;
   background-color: ${({ isActive }) =>
-    !isActive ? "transparent" : "rgba(48, 48, 48, 0.85)"};
+    !isActive ? "transparent" : "rgba(48, 48, 48, 0.95)"};
 `;
 
 export const HeaderContainer = styled.div`
@@ -74,11 +75,21 @@ export const HeaderNav = styled.ul`
 `;
 
 export const HeaderItem = styled.li`
-  margin: 0 5px;
+  margin: 10px 5px;
   padding: 8px 15px;
+  position: relative;
+  width: max-content;
 
   &:last-of-type {
     margin: 0 0 0 5px;
+  }
+
+  &:hover {
+    div {
+      top: 35px;
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 `;
 
@@ -93,6 +104,12 @@ export const HeaderLink = styled(Link)`
     &::before {
       width: 100%;
     }
+
+    & + div {
+      top: 35px;
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 
   &::before {
@@ -103,7 +120,37 @@ export const HeaderLink = styled(Link)`
     height: 4px;
     width: 0%;
     background: linear-gradient(135deg, #74d680, #67a26f);
-    transition: all 200ms ease-out;
+    transition: all 160ms linear;
     border-radius: 1px;
+  }
+`;
+
+export const HeaderDropDown = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 0;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(64, 64, 64, 0.95);
+  box-shadow: -1px 3px 5px -3px rgba(0, 0, 0, 0.75);
+  transition: all 150ms ease-out;
+  opacity: 0;
+  pointer-events: none;
+
+  &:hover {
+    top: 35px;
+    opacity: 1;
+    pointer-events: all;
+  }
+`;
+
+export const HeaderDropDownContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 150ms ease-out;
+
+  li {
+    margin: 5px;
   }
 `;

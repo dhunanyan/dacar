@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BenefitsCardContainer = styled.div`
-  padding: 35px;
+  padding: 15px;
   width: calc(30% - 90px);
   flex-grow: 100;
   border-radius: 20px;
@@ -9,7 +9,7 @@ export const BenefitsCardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 460px;
+  height: 330px;
   background-color: red;
   margin: 15px;
   background: linear-gradient(
@@ -33,13 +33,13 @@ export const BenefitsCardIcon = styled.div`
   justify-content: center;
   align-items: center;
   color: #f1f1f1;
-  margin: 0 0 35px 0;
+  margin: 0 0 15px 0;
 `;
 
 export const BenefitsCardTitle = styled.h2`
   font-size: 26px;
   font-weight: 700;
-  margin: 0 0 35px 0;
+  margin: 0 0 15px 0;
   color: #414141;
 `;
 

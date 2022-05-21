@@ -24,12 +24,12 @@ const HeroBox = ({ descrMap, buttonText, title }) => {
     <HeroContent>
       {getTitle(title)}
 
-      {descrMap.map((descr) => {
+      {descrMap.map((descr, index) => {
         const firstWord = descr.split(" ")[0];
         const rest = descr.substring(firstWord.length + 1);
 
         return (
-          <HeroDescr>
+          <HeroDescr key={index}>
             <span>{firstWord}</span> {rest}
           </HeroDescr>
         );
