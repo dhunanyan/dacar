@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const WorksWorkContainer = styled.div`
-  width: 100%;
+  width: calc(100% - 30px);
   border-radius: 10px;
   padding: 15px;
   display: flex;
   height: 160px;
   background: linear-gradient(
     to left top,
-    rgba(144, 144, 144, 0.8),
-    rgba(144, 144, 144, 0.97)
+    rgba(248, 248, 248, 0.8),
+    rgba(248, 248, 248, 0.9)
   );
   margin: 20px 0;
 `;
@@ -46,12 +47,12 @@ export const WorksWorkDescr = styled.p`
   line-height: 20px;
 `;
 
-export const WorksWorkButton = styled.button`
+export const WorksWorkButton = styled(Link)`
   border-radius: 10px;
   padding: 6px 10px;
   font-size: 16px;
   font-weight: 500;
-  color: #d0d0d0;
+  color: #f0f0f0;
   background: linear-gradient(135deg, #74d680, #67a26f);
   display: flex;
   justify-content: center;

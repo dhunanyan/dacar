@@ -11,7 +11,7 @@ import {
 import logo from "../../assets/logoGreen.png";
 
 const WorksWork = ({ work }) => {
-  const { title, descr, image } = work;
+  const { title, descr, image, name } = work;
   return (
     <WorksWorkContainer>
       <WorksWorkImage>
@@ -20,7 +20,7 @@ const WorksWork = ({ work }) => {
       <WorksWorkContent>
         <WorksWorkTitle>{title}</WorksWorkTitle>
         <WorksWorkDescr>{descr}</WorksWorkDescr>
-        <WorksWorkButton>
+        <WorksWorkButton to={`/work/${name}`}>
           Sprawdź{" "}
           <div>
             <img src={logo} alt="Logo" />

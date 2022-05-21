@@ -28,7 +28,7 @@ export const CarsTitle = styled.h1`
     bottom: -15px;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 60%;
+    width: 150px;
     height: 6px;
     background: #d0d0d0;
     border-radius: 10px;

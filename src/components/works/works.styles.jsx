@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const WorksWrapper = styled.section`
   min-height: 800px;
@@ -7,9 +7,10 @@ export const WorksWrapper = styled.section`
 `;
 
 export const WorksContainer = styled.div`
-  max-width: 1300px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 30px;
+  position: relative;
 `;
 
 export const WorksTitle = styled.h1`
@@ -28,7 +29,7 @@ export const WorksTitle = styled.h1`
     bottom: -15px;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 60%;
+    width: 150px;
     height: 6px;
     background: #d0d0d0;
     border-radius: 10px;
@@ -39,4 +40,47 @@ export const WorksCards = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
+`;
+
+const BenefitsCircle = css`
+  background: linear-gradient(135deg, #74d680, #67a26f);
+  border-radius: 50%;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  z-index: 0;
+`;
+
+export const BenefitsCircle1 = styled.div`
+  ${BenefitsCircle}
+  width: 450px;
+  height: 450px;
+  top: 140px;
+  left: 70px;
+`;
+
+export const BenefitsCircle2 = styled.div`
+  ${BenefitsCircle}
+  width: 350px;
+  height: 350px;
+  bottom: 300px;
+  right: 200px;
+`;
+
+export const BenefitsCircle3 = styled.div`
+  ${BenefitsCircle}
+  width: 160px;
+  height: 160px;
+  top: 180px;
+  right: 20px;
+`;
+
+export const BenefitsCircle4 = styled.div`
+  ${BenefitsCircle}
+  width: 230px;
+  height: 230px;
+  left: 300px;
+  bottom: 20px;
 `;

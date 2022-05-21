@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+
 import WorksWork from "../works-work/works-work.component";
 
 import WORKS_DATA from "./works.data";
@@ -7,6 +8,10 @@ import {
   WorksContainer,
   WorksTitle,
   WorksWrapper,
+  BenefitsCircle1,
+  BenefitsCircle2,
+  BenefitsCircle3,
+  BenefitsCircle4,
 } from "./works.styles";
 
 const Works = () => {
@@ -19,6 +24,11 @@ const Works = () => {
             <WorksWork key={index} work={work} workIndex={index} />
           ))}
         </WorksCards>
+
+        <BenefitsCircle1 />
+        <BenefitsCircle2 />
+        <BenefitsCircle3 />
+        <BenefitsCircle4 />
       </WorksContainer>
     </WorksWrapper>
   );

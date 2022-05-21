@@ -23,6 +23,7 @@ export const HeroTitle = styled.h1`
   font-weight: 700;
   margin: 0 0 35px 0;
   color: #ededed;
+  line-height: 40px;
 
   span {
     padding: 2px 4px;
