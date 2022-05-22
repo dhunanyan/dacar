@@ -1,11 +1,17 @@
 import React from "react";
-import { Route, Routes } from "react-router";
+import Benefits from "../../components/benefits/benefits.component";
+import WHY_DATA from "../../components/benefits/why.data";
 import HeroOffer from "../../components/hero-offer/hero-offer.component";
+import OurOffer from "../../components/our-offer/our-offer.component";
+import Platforms from "../../components/platforms/platforms.component";
 
 const Offer = () => {
   return (
     <>
       <HeroOffer />
+      <OurOffer />
+      <Benefits data={WHY_DATA} title={"Dlaczego Dacar Partner?"} />
+      <Platforms />
     </>
   );
 };

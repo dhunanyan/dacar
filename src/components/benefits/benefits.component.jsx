@@ -1,7 +1,6 @@
 import React from "react";
 import BenefitsCard from "../benefits-card/benefits-card.component";
 
-import BenefitsCardData from "./benefits.data";
 import {
   BenefitsCards,
   BenefitsCircle1,
@@ -13,13 +12,13 @@ import {
   BenefitsWrapper,
 } from "./benefits.styles";
 
-const Benefits = () => {
+const Benefits = ({ title, data }) => {
   return (
     <BenefitsWrapper>
       <BenefitsContainer>
-        <BenefitsTitle>Korzyści ze Współpracy</BenefitsTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
         <BenefitsCards>
-          {BenefitsCardData.map((card) => (
+          {data.map((card) => (
             <BenefitsCard
               title={card.title}
               descr={card.descr}

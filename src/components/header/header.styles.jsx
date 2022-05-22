@@ -31,6 +31,24 @@ export const HeaderLogoContainer = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  div {
+    div {
+      img {
+        transition: all 150ms ease-out;
+      }
+    }
+  }
+
+  &:hover {
+    div {
+      div {
+        img {
+          transform: scale(1.15) rotate(45deg);
+        }
+      }
+    }
+  }
 `;
 
 export const HeaderLogo = styled.div`

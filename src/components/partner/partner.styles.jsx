@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const PartnerWrapper = styled.div`
+export const PartnerWrapper = styled.section`
   min-height: 600px;
   background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;

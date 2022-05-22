@@ -9,6 +9,8 @@ import How from "../../components/how/how.component";
 import PARTNER_DATA from "../../components/partner/partner.data";
 import CONDITIONS_DATA from "../../components/conditions/conditions.data";
 import HOW_DATA from "../../components/how/how.data";
+import Cooperation from "../../components/cooperation/cooperation.component";
+import COOPERATION_DATA from "../../components/cooperation/cooperation.data";
 
 const Uber = () => {
   return (
@@ -17,6 +19,7 @@ const Uber = () => {
       <Partner data={PARTNER_DATA["uber"]} />
       <Conditions data={CONDITIONS_DATA["uber"]} />
       <How data={HOW_DATA["uber"]} />
+      <Cooperation data={COOPERATION_DATA["uber"]} />
     </>
   );
 };

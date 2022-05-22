@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const HowWrapper = styled.div`
+export const HowWrapper = styled.section`
   min-height: 800px;
   background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
@@ -35,7 +35,6 @@ export const HowTitle = styled.h1`
   margin: 30px auto 45px auto;
   text-transform: uppercase;
   position: relative;
-  width: max-content;
   z-index: 5;
 
   &:before {

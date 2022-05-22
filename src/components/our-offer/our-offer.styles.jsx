@@ -1,19 +1,20 @@
 import styled, { css } from "styled-components";
 
-export const BenefitsWrapper = styled.section`
+export const OurOfferWrapper = styled.section`
   min-height: 800px;
-  background: linear-gradient(180deg, #393b44, #737b84);
+  background: linear-gradient(0deg, #393b44, #434c51);
   position: relative;
+  overflow: hidden;
 `;
 
-export const BenefitsContainer = styled.div`
-  max-width: 1300px;
+export const OurOfferContainer = styled.div`
+  max-width: 1240px;
   margin: 0 auto;
   padding: 30px;
   position: relative;
 `;
 
-export const BenefitsTitle = styled.h1`
+export const OurOfferTitle = styled.h1`
   font-size: 56px;
   font-weight: 500;
   color: #d0d0d0;
@@ -21,8 +22,6 @@ export const BenefitsTitle = styled.h1`
   margin: 30px auto 45px auto;
   text-transform: uppercase;
   position: relative;
-  width: max-content;
-  z-index: 5;
 
   &:before {
     content: "";
@@ -37,11 +36,13 @@ export const BenefitsTitle = styled.h1`
   }
 `;
 
-export const BenefitsCards = styled.div`
+export const OurOfferCards = styled.div`
   display: flex;
-  align-items: center;
+  align-items: space-between;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 `;
 
 const BenefitsCircle = css`
@@ -57,15 +58,15 @@ export const BenefitsCircle1 = styled.div`
   ${BenefitsCircle}
   width: 450px;
   height: 450px;
-  top: 140px;
-  left: 70px;
+  top: 110px;
+  left: 20px;
 `;
 
 export const BenefitsCircle2 = styled.div`
   ${BenefitsCircle}
   width: 350px;
   height: 350px;
-  bottom: 300px;
+  bottom: 20px;
   right: 200px;
 `;
 
@@ -75,12 +76,4 @@ export const BenefitsCircle3 = styled.div`
   height: 160px;
   top: 180px;
   right: 20px;
-`;
-
-export const BenefitsCircle4 = styled.div`
-  ${BenefitsCircle}
-  width: 230px;
-  height: 230px;
-  left: 300px;
-  bottom: 20px;
 `;

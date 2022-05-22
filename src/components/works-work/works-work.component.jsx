@@ -20,13 +20,13 @@ const WorksWork = ({ work }) => {
       <WorksWorkContent>
         <WorksWorkTitle>{title}</WorksWorkTitle>
         <WorksWorkDescr>{descr}</WorksWorkDescr>
-        <WorksWorkButton to={`/work/${name}`}>
-          Sprawdź{" "}
-          <div>
-            <img src={logo} alt="Logo" />
-          </div>
-        </WorksWorkButton>
       </WorksWorkContent>
+      <WorksWorkButton to={`/work/${name}`}>
+        Sprawdź{" "}
+        <div>
+          <img src={logo} alt="Logo" />
+        </div>
+      </WorksWorkButton>
     </WorksWorkContainer>
   );
 };

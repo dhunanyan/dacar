@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroWrapper = styled.div`
+export const HeroWrapper = styled.section`
   background-image: ${({ imageUrl }) => `url('${imageUrl}')`};
   background-position: center;
   background-size: cover;

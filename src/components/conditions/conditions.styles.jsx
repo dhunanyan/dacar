@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const ConditionsWrapper = styled.div`
+export const ConditionsWrapper = styled.section`
   min-height: 600px;
   background: linear-gradient(0deg, #393b44, #737b84);
   position: relative;

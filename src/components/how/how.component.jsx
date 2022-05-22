@@ -60,9 +60,7 @@ const How = ({ data }) => {
           </HowList>
         </HowContent>
         <HowCircle1 />
-        <HowCircle2 />
         <HowCircle3 />
-        <HowCircle4 />
       </HowContainer>
     </HowWrapper>
   );
