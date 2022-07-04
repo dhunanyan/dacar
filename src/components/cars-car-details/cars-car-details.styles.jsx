@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const CarDetailsContainer = styled(motion.div)`
   margin: auto;
   width: clamp(50%, 900px, 90%);
-  height: min-content(50%, 400px);
+  min-height: 400px;
   position: relative;
   background: linear-gradient(
     to left top,
@@ -15,6 +15,7 @@ export const CarDetailsContainer = styled(motion.div)`
   z-index: 2;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
 `;
 
@@ -46,7 +47,7 @@ export const CarDetailsImage = styled.div`
   background-size: 100%;
   background-repeat: no-repeat;
   min-width: 480px;
-  height: calc(100%);
+  min-height: 100%;
   border-radius: 10px;
   overflow: hidden;
 
@@ -67,7 +68,9 @@ export const CarDetailsTop = styled.div`
 
 export const CarDetailsBottom = styled.div`
   display: flex;
-  height: 100%;
+  align-items: space-between;
+  justify-content: space-between;
+  min-height: 250px;
   padding: 30px;
 `;
 
@@ -90,10 +93,11 @@ export const CarDetailsCloseButton = styled.button`
 export const CarDetailsContent = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   border-radius: 10px;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   margin: 0 0 0 30px;
   overflow: hidden;
 `;

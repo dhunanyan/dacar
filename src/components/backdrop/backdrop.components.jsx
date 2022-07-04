@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { BackdropContainer } from "./backdrop.styles";
 
 const Backdrop = ({ children, onClick }) => {

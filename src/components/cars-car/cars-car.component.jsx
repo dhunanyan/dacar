@@ -14,9 +14,9 @@ import {
   CarWrapper,
 } from "./cars-car.styles";
 
-const Car = ({ car, onDetailsOpen }) => {
+const Car = ({ car, onDetailsOpen, setSelectedCarIndex, carIndex }) => {
   const { brand, cost, isAvailable, imageUrl } = car;
-
+  console.log(carIndex);
   return (
     <CarWrapper>
       <CarImgContainer imageUrl={imageUrl}></CarImgContainer>
@@ -26,7 +26,12 @@ const Car = ({ car, onDetailsOpen }) => {
       <CarContainer>
         <CarContent>
           <CarTitle>{brand}</CarTitle>
-          <CarBottom onClick={() => onDetailsOpen()}>
+          <CarBottom
+            onClick={() => {
+              onDetailsOpen();
+              setSelectedCarIndex(carIndex);
+            }}
+          >
             <CarDescr>koszt: {cost}</CarDescr>
             <CarButton>Szczegóły</CarButton>
           </CarBottom>

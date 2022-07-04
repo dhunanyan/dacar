@@ -14,6 +14,9 @@ import CARS_DATA from "./cars.data";
 
 const Cars = () => {
   const [selectedCarIndex, setSelectedCarIndex] = useState(0);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const close = () => setDetailsOpen(false);
+  const open = () => setDetailsOpen(true);
 
   const onDetailsOpen = () => {
     if (detailsOpen) {
@@ -22,10 +25,6 @@ const Cars = () => {
       open();
     }
   };
-
-  const [detailsOpen, setDetailsOpen] = useState(false);
-  const close = () => setDetailsOpen(false);
-  const open = () => setDetailsOpen(true);
 
   return (
     <CarsWrapper>
