@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const CarWrapper = styled.div`
   width: calc(30% - 90px);
@@ -19,7 +20,6 @@ export const CarWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 6px 6px 20px rgba(48, 48, 48, 0.2);
   backdrop-filter: blur(12px);
-  z-index: 1;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -120,7 +120,7 @@ export const CarDescr = styled.p`
   border-radius: 8px;
 `;
 
-export const CarButton = styled.button`
+export const CarButton = styled(motion.button)`
   font-size: 14px;
   background: linear-gradient(
     135deg,

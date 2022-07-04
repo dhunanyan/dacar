@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import CarDetails from "../cars-car-details/cars-car-details.component";
+
+import { AnimatePresence } from "framer-motion";
 import Car from "../cars-car/cars-car.component";
 import {
   CarsCards,
@@ -8,12 +11,21 @@ import {
 } from "./cars.styles";
 
 import CARS_DATA from "./cars.data";
-import CarDetails from "../cars-car-details/cars-car-details.component";
 
 const Cars = () => {
-  const [isCarDetailsShown, setIsCarDetailsShown] = useState(false);
-
   const [selectedCarIndex, setSelectedCarIndex] = useState(0);
+
+  const onDetailsOpen = () => {
+    if (detailsOpen) {
+      close();
+    } else {
+      open();
+    }
+  };
+
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const close = () => setDetailsOpen(false);
+  const open = () => setDetailsOpen(true);
 
   return (
     <CarsWrapper>
@@ -25,19 +37,27 @@ const Cars = () => {
               key={index}
               car={car}
               setSelectedCarIndex={setSelectedCarIndex}
-              setIsCarDetailsShown={setIsCarDetailsShown}
               carIndex={index}
+              onDetailsOpen={onDetailsOpen}
             />
           ))}
         </CarsCards>
       </CarsContainer>
 
-      <CarDetails
-        car={CARS_DATA[selectedCarIndex]}
-        setIsCarDetailsShown={setIsCarDetailsShown}
-        setSelectedCarIndex={setSelectedCarIndex}
-        isCarDetailsShown={isCarDetailsShown}
-      />
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {detailsOpen && (
+          <CarDetails
+            detailsOpen={detailsOpen}
+            handleClose={close}
+            car={CARS_DATA[selectedCarIndex]}
+            setSelectedCarIndex={setSelectedCarIndex}
+          />
+        )}
+      </AnimatePresence>
     </CarsWrapper>
   );
 };

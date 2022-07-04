@@ -1,43 +1,10 @@
 import styled, { css } from "styled-components";
-import { Grow } from "@material-ui/core";
+import { motion } from "framer-motion";
 
-export const CarDetailsWrapper = styled.div`
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999;
-  pointer-events: ${({ isActive }) => (!isActive ? "none" : "all")};
-`;
-
-export const CarDetailsBackgroundGrow = styled(Grow)`
-  pointer-events: ${({ isActive }) => (!isActive ? "none" : "all")};
-`;
-
-export const CarDetailsBackground = styled.div`
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    to left top,
-    rgba(144, 144, 144, 0.8),
-    rgba(144, 144, 144, 0.97)
-  );
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
-
-export const CarDetailsContainer = styled.div`
+export const CarDetailsContainer = styled(motion.div)`
   margin: auto;
-  max-width: 900px;
-  height: 430px;
-  width: 100%;
+  width: clamp(50%, 900px, 90%);
+  height: min-content(50%, 400px);
   position: relative;
   background: linear-gradient(
     to left top,

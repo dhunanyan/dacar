@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { MdEventAvailable as Available } from "react-icons/md";
 import { FaCalendarTimes as NotAvailable } from "react-icons/fa";
@@ -14,13 +14,8 @@ import {
   CarWrapper,
 } from "./cars-car.styles";
 
-const Car = ({ car, carIndex, setSelectedCarIndex, setIsCarDetailsShown }) => {
+const Car = ({ car, onDetailsOpen }) => {
   const { brand, cost, isAvailable, imageUrl } = car;
-
-  const onDetailsClick = () => {
-    setSelectedCarIndex(carIndex);
-    setIsCarDetailsShown(true);
-  };
 
   return (
     <CarWrapper>
@@ -31,7 +26,7 @@ const Car = ({ car, carIndex, setSelectedCarIndex, setIsCarDetailsShown }) => {
       <CarContainer>
         <CarContent>
           <CarTitle>{brand}</CarTitle>
-          <CarBottom onClick={onDetailsClick}>
+          <CarBottom onClick={() => onDetailsOpen()}>
             <CarDescr>koszt: {cost}</CarDescr>
             <CarButton>Szczegóły</CarButton>
           </CarBottom>
