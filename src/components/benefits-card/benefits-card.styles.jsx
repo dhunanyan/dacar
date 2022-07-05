@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const BenefitsCardContainer = styled.div`
   padding: 15px;
   width: calc(30% - 90px);
+  min-width: 255px;
   flex-grow: 100;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 330px;
+  height: 360px;
   background-color: red;
   margin: 15px;
   background: linear-gradient(

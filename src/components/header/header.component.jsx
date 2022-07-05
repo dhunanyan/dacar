@@ -3,8 +3,11 @@ import {
   HeaderContainer,
   HeaderDropDown,
   HeaderDropDownContainer,
+  HeaderDropDownItem,
+  HeaderDropDownLink,
   HeaderImg,
   HeaderItem,
+  HeaderItemContainer,
   HeaderLink,
   HeaderLogo,
   HeaderLogoContainer,
@@ -45,42 +48,58 @@ const Header = () => {
         </HeaderLogoContainer>
 
         <HeaderNav>
-          <HeaderItem>
-            <HeaderLink to="/work">Praca</HeaderLink>
+          <HeaderItemContainer>
+            <HeaderItem isDropDown={false}>
+              <HeaderLink to="/work">Praca</HeaderLink>
+            </HeaderItem>
 
-            <HeaderDropDown>
+            <HeaderDropDown isDropDown={true}>
               <HeaderDropDownContainer>
-                <HeaderItem>
-                  <HeaderLink to="/work/uber">Uber Kierowca</HeaderLink>
-                </HeaderItem>
-                <HeaderItem>
-                  <HeaderLink to="/work/bolt">Bolt Kierowca</HeaderLink>
-                </HeaderItem>
-                <HeaderItem>
-                  <HeaderLink to="/work/free-now">FreeNow Kierowca</HeaderLink>
-                </HeaderItem>
+                <HeaderDropDownItem>
+                  <HeaderDropDownLink to="/work/uber">
+                    <span>Uber Kierowca</span>
+                  </HeaderDropDownLink>
+                </HeaderDropDownItem>
+                <HeaderDropDownItem>
+                  <HeaderDropDownLink to="/work/bolt">
+                    <span>Bolt Kierowca</span>
+                  </HeaderDropDownLink>
+                </HeaderDropDownItem>
+                <HeaderDropDownItem>
+                  <HeaderDropDownLink to="/work/free-now">
+                    <span>FreeNow Kierowca</span>
+                  </HeaderDropDownLink>
+                </HeaderDropDownItem>
               </HeaderDropDownContainer>
             </HeaderDropDown>
-          </HeaderItem>
+          </HeaderItemContainer>
 
-          <HeaderItem>
-            <HeaderLink to="/offer">Oferta</HeaderLink>
+          <HeaderItemContainer>
+            <HeaderItem isDropDown={false}>
+              <HeaderLink to="/offer">Oferta</HeaderLink>
+            </HeaderItem>
 
-            <HeaderDropDown>
+            <HeaderDropDown isDropDown={true}>
               <HeaderDropDownContainer>
-                <HeaderItem>
-                  <HeaderLink to="/offer/driver">Kierowca</HeaderLink>
-                </HeaderItem>
-                <HeaderItem>
-                  <HeaderLink to="/offer/vehicles">Pojazdy</HeaderLink>
-                </HeaderItem>
+                <HeaderDropDownItem>
+                  <HeaderDropDownLink to="/offer/driver">
+                    <span>Kierowca</span>
+                  </HeaderDropDownLink>
+                </HeaderDropDownItem>
+                <HeaderDropDownItem>
+                  <HeaderDropDownLink to="/offer/vehicles">
+                    <span>Pojazdy</span>
+                  </HeaderDropDownLink>
+                </HeaderDropDownItem>
               </HeaderDropDownContainer>
             </HeaderDropDown>
-          </HeaderItem>
+          </HeaderItemContainer>
 
-          <HeaderItem>
-            <HeaderLink to="/contact">Kontakt</HeaderLink>
-          </HeaderItem>
+          <HeaderItemContainer>
+            <HeaderItem isDropDown={false}>
+              <HeaderLink to="/contact">Kontakt</HeaderLink>
+            </HeaderItem>
+          </HeaderItemContainer>
         </HeaderNav>
       </HeaderContainer>
     </HeaderWrapper>

@@ -42,6 +42,9 @@ export const BenefitsCards = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width: 1150px) {
+  }
 `;
 
 const BenefitsCircle = css`

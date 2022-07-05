@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 
 export const CarWrapper = styled.div`
   width: calc(30% - 90px);
+  min-width: 250px;
+  height: 300px;
   flex-grow: 100;
   border-radius: 20px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 300px;
   background-color: red;
-  margin: 15px;
   background: linear-gradient(
     to left top,
     rgba(248, 248, 248, 0.5),
     rgba(248, 248, 248, 0.7)
   );
-  border-radius: 10px;
   box-shadow: 6px 6px 20px rgba(48, 48, 48, 0.2);
   backdrop-filter: blur(12px);
   text-align: center;
