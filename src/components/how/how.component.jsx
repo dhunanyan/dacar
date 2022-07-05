@@ -19,8 +19,6 @@ import {
 const How = ({ data }) => {
   const { title, list } = data;
 
-  console.log(list);
-
   return (
     <HowWrapper>
       <HowContainer>

@@ -14,6 +14,8 @@ import {
   HeaderLogoText,
   HeaderLogoTitle,
   HeaderNav,
+  HeaderToggleIcon,
+  HeaderToggleIconContainer,
   HeaderWrapper,
 } from "./header.styles";
 
@@ -21,6 +23,7 @@ import logo from "../../assets/logoGreen.png";
 
 const Header = () => {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const changeHeaderBackground = () => {
     if (window.scrollY >= 110) {
@@ -31,7 +34,6 @@ const Header = () => {
   };
 
   window.addEventListener("scroll", changeHeaderBackground);
-
   return (
     <HeaderWrapper isActive={isHeaderActive}>
       <HeaderContainer isActive={isHeaderActive}>
@@ -47,6 +49,15 @@ const Header = () => {
           <HeaderLogoTitle>Partner</HeaderLogoTitle>
         </HeaderLogoContainer>
 
+        <HeaderToggleIconContainer
+          onClick={() => setIsBurgerOpen(!isBurgerOpen)}
+        >
+          <HeaderToggleIcon isBurgerOpen={isBurgerOpen}>
+            <span />
+            <span />
+            <span />
+          </HeaderToggleIcon>
+        </HeaderToggleIconContainer>
         <HeaderNav>
           <HeaderItemContainer>
             <HeaderItem isDropDown={false}>

@@ -1,4 +1,3 @@
-import { Grow } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
@@ -86,10 +85,102 @@ export const HeaderLogoTitle = styled.p`
   color: #ededed;
 `;
 
+export const HeaderToggleIconContainer = styled.button`
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border-radius: 5px;
+  box-shadow: -1px 3px 5px -3px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+    to left top,
+    rgba(248, 248, 248, 0.3),
+    rgba(248, 248, 248, 0.5)
+  );
+  cursor: pointer;
+  padding: 5px;
+`;
+
+const BurgerMenuOpened = css`
+  span {
+    &:nth-of-type(1) {
+      width: 50%;
+      left: 40%;
+      top: 19%;
+      transform: rotate(-45deg) translate(0, 19%);
+    }
+
+    &:nth-of-type(2) {
+      width: 100%;
+      top: 48%;
+      left: -5%;
+      transform: rotate(45deg) translate(0, -48%);
+    }
+
+    &:nth-of-type(3) {
+      width: 50%;
+      right: 40%;
+      bottom: 19%;
+      transform: rotate(-45deg) translate(0, -19%);
+    }
+  }
+`;
+
+const BurgerMenuClosed = css`
+  span {
+    &:nth-of-type(1) {
+      width: 50%;
+      left: 0;
+      top: 0;
+      transform: rotate(0) translate(0, 0);
+    }
+
+    &:nth-of-type(2) {
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-0deg);
+    }
+
+    &:nth-of-type(3) {
+      width: 50%;
+      right: 0;
+      bottom: 0;
+      transform: rotate(0) translate(0, 0);
+    }
+  }
+`;
+
+export const HeaderToggleIcon = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  span {
+    background: linear-gradient(135deg, #292929, #292929);
+    height: 6px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    transition: all 160ms ease-out;
+  }
+
+  ${({ isBurgerOpen }) => (isBurgerOpen ? BurgerMenuOpened : BurgerMenuClosed)}
+`;
+
 export const HeaderNav = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    with: 100%;
+    flex-direction: column;
+    background-color: rgba(48, 48, 48, 0.95);
+  }
 `;
 
 export const HeaderItemContainer = styled.li`

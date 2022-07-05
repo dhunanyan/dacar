@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SectionQueries } from "../../GlobalStyles";
 
 export const CarsWrapper = styled.section`
   min-height: 800px;
@@ -33,6 +34,8 @@ export const CarsTitle = styled.h1`
     background: #d0d0d0;
     border-radius: 10px;
   }
+
+  ${SectionQueries}
 `;
 
 export const CarsCards = styled.div`

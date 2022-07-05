@@ -19,6 +19,10 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   transition: all 250ms ease-out;
+
+  @media (max-width: 990px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterLogoContainer = styled(Link)`
@@ -27,6 +31,10 @@ export const FooterLogoContainer = styled(Link)`
   justify-content: space-between;
   transition: all 150ms ease-out;
   transform: scale(0.7) translate(-70px, 0);
+
+  @media (max-width: 990px) {
+    align-self: flex-start;
+  }
 
   div {
     div {
@@ -87,6 +95,10 @@ export const FooterMenu = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 990px) {
+    margin: 10px 0;
+  }
 `;
 
 export const FooterLink = styled(Link)`
@@ -107,6 +119,10 @@ export const FooterAuthor = styled.p`
   display: flex;
   align-items: center;
   margin: auto 0px 15px 5px;
+
+  @media (max-width: 990px) {
+    align-self: flex-end;
+  }
 
   svg {
     color: #74d680;

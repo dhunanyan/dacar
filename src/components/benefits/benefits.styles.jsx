@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { SectionQueries } from "../../GlobalStyles";
 
 export const BenefitsWrapper = styled.section`
   min-height: 800px;
@@ -35,6 +36,8 @@ export const BenefitsTitle = styled.h1`
     background: #d0d0d0;
     border-radius: 10px;
   }
+
+  ${SectionQueries}
 `;
 
 export const BenefitsCards = styled.div`

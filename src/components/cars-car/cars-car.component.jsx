@@ -16,7 +16,7 @@ import {
 
 const Car = ({ car, onDetailsOpen, setSelectedCarIndex, carIndex }) => {
   const { brand, cost, isAvailable, imageUrl } = car;
-  console.log(carIndex);
+
   return (
     <CarWrapper>
       <CarImgContainer imageUrl={imageUrl}></CarImgContainer>
