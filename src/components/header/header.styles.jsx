@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -217,13 +218,14 @@ export const HeaderItem = styled.div`
   }
 `;
 
-export const HeaderLink = styled(Link)`
+const Links = css`
   color: #ededed;
   font-size: 20px;
   font-weight: 700;
   position: relative;
   min-width: max-content;
   width: 100%;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -236,6 +238,14 @@ export const HeaderLink = styled(Link)`
     transition: all 120ms linear;
     border-radius: 1px;
   }
+`;
+
+export const HeaderLinkScroll = styled(LinkScroll)`
+  ${Links}
+`;
+
+export const HeaderLink = styled(Link)`
+  ${Links}
 `;
 
 export const HeaderDropDown = styled.div`

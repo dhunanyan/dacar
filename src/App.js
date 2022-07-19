@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router";
+
 import "./App.css";
 import Footer from "./components/footer/footer.component";
 import Header from "./components/header/header.component";
 import Bolt from "./pages/bolt/bolt.component";
-import Contact from "./pages/contact/contact.component";
 import FreeNow from "./pages/free-now/free-now.component";
 import Home from "./pages/home/home.component";
 import Offer from "./pages/offer/offer.component";
@@ -24,7 +24,6 @@ const App = () => {
         <Route exact path="/work/uber" element={<Uber />} />
         <Route exact path="/work/bolt" element={<Bolt />} />
         <Route exact path="/work/free-now" element={<FreeNow />} />
-        <Route exact path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>

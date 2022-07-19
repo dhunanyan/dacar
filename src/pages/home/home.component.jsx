@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <HeroHome />
       <Benefits data={BENEFITS_DATA} title={"Korzyści ze Współpracy"} />
-      <Contact title="Contact" />
+      <Contact title={"Skontaktuj się"} />
     </>
   );
 };

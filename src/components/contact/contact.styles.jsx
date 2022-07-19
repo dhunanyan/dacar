@@ -50,6 +50,13 @@ export const ContactInput = styled.input`
   padding: 8px 16px;
   width: calc(100% - 32px);
   margin: 8px 0;
+  border: rgba(220, 220, 220, 0) solid 3px;
+  transition: all 150ms ease-out;
+
+  &:focus,
+  &:active {
+    border: rgba(218, 218, 218, 0.95) solid 3px;
+  }
 `;
 
 export const ContactTextarea = styled.textarea`
@@ -68,7 +75,13 @@ export const ContactTextarea = styled.textarea`
   max-height: 250px;
   max-width: calc(100% - 32px);
   min-width: calc(100% - 32px);
-  border: ;
+  border: rgba(218, 218, 218, 0) solid 3px;
+  transition: all 150ms ease-out;
+
+  &:focus,
+  &:active {
+    border: rgba(218, 218, 218, 0.95) solid 3px;
+  }
 `;
 
 export const ContactButton = styled.button`

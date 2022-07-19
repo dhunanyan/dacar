@@ -9,6 +9,7 @@ import {
   HeaderItem,
   HeaderItemContainer,
   HeaderLink,
+  HeaderLinkScroll,
   HeaderLogo,
   HeaderLogoContainer,
   HeaderLogoText,
@@ -21,7 +22,7 @@ import {
 
 import logo from "../../assets/logoGreen.png";
 
-const Header = () => {
+const Header = ({ contactRef }) => {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
@@ -108,7 +109,16 @@ const Header = () => {
 
           <HeaderItemContainer>
             <HeaderItem isDropDown={false}>
-              <HeaderLink to="/contact">Kontakt</HeaderLink>
+              <HeaderLinkScroll
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={200}
+                to="contact"
+              >
+                Kontakt
+              </HeaderLinkScroll>
             </HeaderItem>
           </HeaderItemContainer>
         </HeaderNav>

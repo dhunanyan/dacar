@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const CooperationWrapper = styled.section`
   min-height: 800px;
-  background: linear-gradient(0deg, #393b44, #737b84);
+  background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
 `;
 

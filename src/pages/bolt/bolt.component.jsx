@@ -8,6 +8,7 @@ import HOW_DATA from "../../components/how/how.data";
 import How from "../../components/how/how.component";
 import Cooperation from "../../components/cooperation/cooperation.component";
 import COOPERATION_DATA from "../../components/cooperation/cooperation.data";
+import Contact from "../../components/contact/contact.component";
 
 const Bolt = () => {
   return (
@@ -16,6 +17,7 @@ const Bolt = () => {
       <Partner data={PARTNER_DATA["bolt"]} />
       <Conditions data={CONDITIONS_DATA["bolt"]} />
       <How data={HOW_DATA["bolt"]} />
+      <Contact title={"Skontaktuj się"} />
       <Cooperation data={COOPERATION_DATA["bolt"]} />
     </>
   );

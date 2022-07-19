@@ -17,7 +17,7 @@ import {
 import emailjs from "emailjs-com";
 import { useRef } from "react";
 
-const Contact = ({ title }) => {
+const Contact = ({ title, contactRef }) => {
   const form = useRef();
 
   const [firstName, setFirstName] = useState("");
@@ -51,7 +51,7 @@ const Contact = ({ title }) => {
   };
 
   return (
-    <ContactWrapper>
+    <ContactWrapper ref={contactRef} id="contact">
       <ContactContainer>
         <BenefitsTitle>{title}</BenefitsTitle>
 

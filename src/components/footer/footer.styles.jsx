@@ -118,7 +118,7 @@ export const FooterAuthor = styled.p`
   color: #f1f1f1;
   display: flex;
   align-items: center;
-  margin: auto 0px 15px 5px;
+  margin: auto 0px 5px 5px;
 
   @media (max-width: 990px) {
     align-self: flex-end;
