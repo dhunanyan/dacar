@@ -2,7 +2,7 @@
   "name": "dacar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dhunanyan.com/dacar",
+  "homepage": "https://dhunanyan.github.io/dacar",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
