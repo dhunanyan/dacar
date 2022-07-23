@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dacar/static/css/main.ddfc290f.css",
-    "main.js": "/dacar/static/js/main.838aa000.js",
+    "main.js": "/dacar/static/js/main.cea885bc.js",
     "static/media/heroWork.jpg": "/dacar/static/media/heroWork.6199c68d68006fae2c14.jpg",
     "static/media/rental.jpg": "/dacar/static/media/rental.1d3b36284cab1615e66d.jpg",
     "static/media/heroFreeNow.jpg": "/dacar/static/media/heroFreeNow.b6dc60ca325d44ad6888.jpg",
@@ -16,10 +16,10 @@
     "static/media/logoGreen.png": "/dacar/static/media/logoGreen.6fcd87d25106dad8ad39.png",
     "index.html": "/dacar/index.html",
     "main.ddfc290f.css.map": "/dacar/static/css/main.ddfc290f.css.map",
-    "main.838aa000.js.map": "/dacar/static/js/main.838aa000.js.map"
+    "main.cea885bc.js.map": "/dacar/static/js/main.cea885bc.js.map"
   },
   "entrypoints": [
     "static/css/main.ddfc290f.css",
-    "static/js/main.838aa000.js"
+    "static/js/main.cea885bc.js"
   ]
 }
