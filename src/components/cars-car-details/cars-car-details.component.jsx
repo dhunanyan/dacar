@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   CardDetailsLogo,
-  CarDetailsBackground,
-  CarDetailsBackgroundGrow,
   CarDetailsBottom,
   CarDetailsButton,
   CarDetailsButtonContainer,
@@ -10,10 +8,8 @@ import {
   CarDetailsContainer,
   CarDetailsContent,
   CarDetailsDescr,
-  CarDetailsGrow,
   CarDetailsImage,
   CarDetailsTop,
-  CarDetailsWrapper,
 } from "./cars-car-details.styles";
 
 import { FaTimes as Times } from "react-icons/fa";

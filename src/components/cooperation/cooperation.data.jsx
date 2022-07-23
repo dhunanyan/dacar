@@ -1,12 +1,9 @@
 import {
   FaBuilding as Building,
-  FaCar as Car,
-  FaTaxi as Taxi,
   FaRegHandshake as HandShake,
 } from "react-icons/fa";
 import { BsCashCoin as Cash } from "react-icons/bs";
 import { BiFileBlank as Blank } from "react-icons/bi";
-import { MdOutlineSchedule as Time } from "react-icons/md";
 
 const COOPERATION_DATA = {
   uber: {

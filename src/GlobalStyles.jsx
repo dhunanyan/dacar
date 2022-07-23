@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import { css } from "styled-components";
 
 export const SectionQueries = css`
   @media (max-width: 990px) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { MdEventAvailable as Available } from "react-icons/md";
 import { FaCalendarTimes as NotAvailable } from "react-icons/fa";
