@@ -5,15 +5,20 @@ import Contact from "../../components/contact/contact.component";
 import HeroOffer from "../../components/hero-offer/hero-offer.component";
 import OurOffer from "../../components/our-offer/our-offer.component";
 import Platforms from "../../components/platforms/platforms.component";
+import { benefitsSizes } from "../../components/styleVars";
 
 const Offer = () => {
   return (
     <>
       <HeroOffer />
-      <OurOffer />
-      <Benefits data={WHY_DATA} title={"Dlaczego Dacar Partner?"} />
-      <Platforms />
+      <OurOffer title={"Nasza Oferta"} />
+      <Benefits
+        size={benefitsSizes.small}
+        data={WHY_DATA}
+        title={"Dlaczego Dacar Partner?"}
+      />
       <Contact title={"Skontaktuj się"} />
+      <Platforms />
     </>
   );
 };

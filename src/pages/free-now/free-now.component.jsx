@@ -9,6 +9,7 @@ import How from "../../components/how/how.component";
 import HOW_DATA from "../../components/how/how.data";
 import Partner from "../../components/partner/partner.component";
 import PARTNER_DATA from "../../components/partner/partner.data";
+import { benefitsSizes } from "../../components/styleVars";
 const FreeNow = ({ contactRef }) => {
   return (
     <>
@@ -16,7 +17,10 @@ const FreeNow = ({ contactRef }) => {
       <Partner data={PARTNER_DATA["free-now"]} />
       <Conditions data={CONDITIONS_DATA["free-now"]} />
       <How data={HOW_DATA["free-now"]} />
-      <Cooperation data={COOPERATION_DATA["free-now"]} />
+      <Cooperation
+        size={benefitsSizes.big}
+        data={COOPERATION_DATA["free-now"]}
+      />
       <Contact title={"Skontaktuj się"} />
     </>
   );

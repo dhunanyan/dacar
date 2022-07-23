@@ -2,8 +2,9 @@ import styled, { css } from "styled-components";
 
 export const PlatformsWrapper = styled.section`
   min-height: 800px;
-  background: linear-gradient(0deg, #393b44, #434c51);
+  background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
+  overflow: hidden;
 `;
 
 export const PlatformsContainer = styled.div`
@@ -22,6 +23,7 @@ export const PlatformsTitle = styled.h1`
   text-transform: uppercase;
   position: relative;
   width: max-content;
+  z-index: 1;
 
   &:before {
     content: "";

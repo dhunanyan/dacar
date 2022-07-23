@@ -1,10 +1,9 @@
 import React from "react";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
 import {
   HowCircle1,
-  HowCircle2,
   HowCircle3,
-  HowCircle4,
   HowContainer,
   HowContent,
   HowItem,
@@ -12,7 +11,6 @@ import {
   HowItemSubtitle,
   HowList,
   HowSubItem,
-  HowTitle,
   HowWrapper,
 } from "./how.styles";
 
@@ -22,7 +20,7 @@ const How = ({ data }) => {
   return (
     <HowWrapper>
       <HowContainer>
-        <HowTitle>{title}</HowTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
 
         <HowContent>
           <HowList>

@@ -114,7 +114,7 @@ export const FooterLink = styled(Link)`
 `;
 
 export const FooterAuthor = styled.p`
-  font-size: 16px;
+  font-size: 10px;
   color: #f1f1f1;
   display: flex;
   align-items: center;
@@ -126,7 +126,7 @@ export const FooterAuthor = styled.p`
 
   svg {
     color: #74d680;
-    font-size: 22px;
-    margin: 0 5px;
+    font-size: 14px;
+    margin: 0 2px;
   }
 `;

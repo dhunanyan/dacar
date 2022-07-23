@@ -1,4 +1,5 @@
 import React from "react";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
 import WorksWork from "../works-work/works-work.component";
 
@@ -6,7 +7,6 @@ import WORKS_DATA from "./works.data";
 import {
   WorksCards,
   WorksContainer,
-  WorksTitle,
   WorksWrapper,
   BenefitsCircle1,
   BenefitsCircle2,
@@ -14,11 +14,12 @@ import {
   BenefitsCircle4,
 } from "./works.styles";
 
-const Works = () => {
+const Works = ({ title }) => {
   return (
     <WorksWrapper>
       <WorksContainer>
-        <WorksTitle>Praca</WorksTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
+
         <WorksCards>
           {WORKS_DATA.map((work, index) => (
             <WorksWork key={index} work={work} workIndex={index} />

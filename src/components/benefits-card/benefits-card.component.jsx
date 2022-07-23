@@ -6,9 +6,9 @@ import {
   BenefitsCardTitle,
 } from "./benefits-card.styles";
 
-const BenefitsCard = ({ title, descr, icon }) => {
+const BenefitsCard = ({ title, descr, icon, size }) => {
   return (
-    <BenefitsCardContainer>
+    <BenefitsCardContainer size={size}>
       <BenefitsCardIcon>{icon}</BenefitsCardIcon>
       <BenefitsCardTitle>{title}</BenefitsCardTitle>
       <BenefitsCardDescr>{descr}</BenefitsCardDescr>

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
 
 export const HeaderWrapper = styled.header`
+  transition: all 150ms ease-out;
   width: 100%;
   position: fixed;
   top: 0;
@@ -14,6 +15,10 @@ export const HeaderWrapper = styled.header`
   transition: all 150ms ease-out;
   background-color: ${({ isActive }) =>
     !isActive ? "transparent" : "rgba(48, 48, 48, 0.95)"};
+
+  @media (max-width: 768px) {
+    background-color: rgba(30, 30, 30, 0.98);
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -25,12 +30,16 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   transition: all 250ms ease-out;
+  @media (max-width: 768px) {
+    padding: 5px 30px;
+  }
 `;
 
 export const HeaderLogoContainer = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 150ms ease-out;
 
   div {
     div {
@@ -59,6 +68,7 @@ export const HeaderLogo = styled.div`
   border-radius: 8px;
   background: linear-gradient(135deg, #74d680, #67a26f);
   margin: 0 10px 0 0;
+  transition: all 150ms ease-out;
 `;
 
 export const HeaderImg = styled.div`
@@ -67,6 +77,7 @@ export const HeaderImg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 150ms ease-out;
 
   img {
     width: 100%;
@@ -77,6 +88,7 @@ export const HeaderLogoText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: all 150ms ease-out;
 `;
 
 export const HeaderLogoTitle = styled.p`
@@ -84,6 +96,7 @@ export const HeaderLogoTitle = styled.p`
   font-size: 32px;
   font-weight: 700;
   color: #ededed;
+  transition: all 150ms ease-out;
 `;
 
 export const HeaderToggleIconContainer = styled.button`
@@ -100,10 +113,20 @@ export const HeaderToggleIconContainer = styled.button`
   );
   cursor: pointer;
   padding: 5px;
+  display: none;
+  transition: all 150ms ease-out;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const BurgerMenuOpened = css`
+  transition: all 150ms ease-out;
+
   span {
+    transition: all 150ms ease-out;
+
     &:nth-of-type(1) {
       width: 50%;
       left: 40%;
@@ -128,7 +151,11 @@ const BurgerMenuOpened = css`
 `;
 
 const BurgerMenuClosed = css`
+  transition: all 150ms ease-out;
+
   span {
+    transition: all 150ms ease-out;
+
     &:nth-of-type(1) {
       width: 50%;
       left: 0;
@@ -156,13 +183,15 @@ export const HeaderToggleIcon = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  transition: all 150ms ease-out;
+
   span {
     background: linear-gradient(135deg, #292929, #292929);
     height: 6px;
     border-radius: 5px;
     display: block;
     position: absolute;
-    transition: all 160ms ease-out;
+    transition: all 150ms ease-out;
   }
 
   ${({ isBurgerOpen }) => (isBurgerOpen ? BurgerMenuOpened : BurgerMenuClosed)}
@@ -172,14 +201,18 @@ export const HeaderNav = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 200ms ease-out;
 
   @media (max-width: 768px) {
-    position: absolute;
-    top: 0;
-    left: -100%;
     height: 100vh;
-    with: 100%;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: absolute;
+    top: 70px;
+    left: ${({ isBurgerOpen }) => (isBurgerOpen ? 0 : "-100%")};
     background-color: rgba(48, 48, 48, 0.95);
   }
 `;
@@ -193,18 +226,29 @@ export const HeaderItemContainer = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
-  &:hover {
-    div {
-      a {
-        &::before {
-          width: 100%;
+  @media (min-width: 768px) {
+    &:hover {
+      div {
+        a {
+          &::before {
+            width: 100%;
+          }
         }
-      }
 
-      opacity: 1;
-      pointer-events: all;
+        opacity: 1;
+        pointer-events: all;
+      }
     }
+  }
+
+  @media (max-width: 768px) {
+    margin: 8px 0;
+    padding: 8px 15px;
+    min-width: 100%;
+    position: relative;
+    max-height: ${({ isDropDownOpen }) => (isDropDownOpen ? "100%" : "30px")};
   }
 `;
 
@@ -212,9 +256,18 @@ export const HeaderItem = styled.div`
   min-width: 100%;
   min-height: 100%;
   margin: 10px 5px;
+  transition: all 150ms ease-out;
 
   &:last-of-type {
     margin: 0 0 0 5px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    min-height: auto;
+    margin: 0;
+    padding: 10px 0;
   }
 `;
 
@@ -248,6 +301,37 @@ export const HeaderLink = styled(Link)`
   ${Links}
 `;
 
+export const HeaderDropDownButton = styled.button`
+  border: 0;
+  border-radius: 10px;
+  box-shadow: -1px 3px 5px -3px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+    to left top,
+    rgba(64, 64, 64, 0.3),
+    rgba(64, 64, 64, 0.5)
+  );
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 50px;
+  width: 36px;
+  height: 36px;
+  display: none;
+
+  svg {
+    transition: all 150ms ease-out;
+    color: #ededed;
+    transform: ${({ isDropDownOpen }) =>
+      isDropDownOpen ? "rotate(-180deg)" : "rotate(0deg)"};
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 export const HeaderDropDown = styled.div`
   min-width: 220px;
   position: absolute;
@@ -261,17 +345,29 @@ export const HeaderDropDown = styled.div`
     rgba(64, 64, 64, 0.3),
     rgba(64, 64, 64, 0.5)
   );
-  transition: all 120ms ease-out;
-  opacity: 0;
-  pointer-events: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 150ms ease-out;
 
-  &:hover {
-    top: 55px;
+  @media (min-width: 768px) {
+    opacity: 0;
+    pointer-events: none;
+
+    &:hover {
+      top: 55px;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-width: calc(100% - 65px);
+    position: static;
     opacity: 1;
-    pointer-events: all;
+    top: auto;
+    left: auto;
+    height: ${({ isDropDownOpen }) => (isDropDownOpen ? "100%" : 0)};
   }
 `;
 
@@ -279,9 +375,13 @@ export const HeaderDropDownContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 150ms ease-out;
   text-align: center;
   min-width: 100%;
+  transition: all 150ms ease-out;
+
+  @media (max-width: 768px) {
+    opacity: ${({ isDropDownOpen }) => (isDropDownOpen ? 1 : 0)};
+  }
 `;
 
 export const HeaderDropDownItem = styled.li`
@@ -311,6 +411,13 @@ export const HeaderDropDownItem = styled.li`
     width: calc(100% - 160px);
     height: 1px;
     border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    &::before {
+      left: 40%;
+      width: calc(100% - 80%);
+    }
   }
 `;
 

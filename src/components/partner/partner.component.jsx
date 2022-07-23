@@ -8,20 +8,20 @@ import {
   PartnerContent,
   PartnerDescrs,
   PartnerDescr,
-  PartnerTitle,
   PartnerWrapper,
   PartnerContentInner,
   PartnerButton,
 } from "./partner.styles";
 
 import logo from "../../assets/logoGreen.png";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
 const Partner = ({ data }) => {
   const { title, descr } = data;
   return (
     <PartnerWrapper>
       <PartnerContainer>
-        <PartnerTitle>{title}</PartnerTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
 
         <PartnerContent>
           <PartnerDescrs>

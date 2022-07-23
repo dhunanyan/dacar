@@ -6,7 +6,6 @@ import {
   BenefitsCircle4,
   ConditionsContainer,
   ConditionsContent,
-  ConditionsTitle,
   ConditionsWrapper,
   ConditionsContentInner,
   ConditionsButton,
@@ -16,13 +15,14 @@ import {
 } from "./conditions.styles";
 
 import logo from "../../assets/logoGreen.png";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
 const Conditions = ({ data }) => {
   const { title, list, subtitle, descr, url } = data;
   return (
     <ConditionsWrapper>
       <ConditionsContainer>
-        <ConditionsTitle>{title}</ConditionsTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
 
         <ConditionsContent>
           <ConditionsList>

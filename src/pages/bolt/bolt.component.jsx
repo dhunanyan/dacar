@@ -9,6 +9,7 @@ import How from "../../components/how/how.component";
 import Cooperation from "../../components/cooperation/cooperation.component";
 import COOPERATION_DATA from "../../components/cooperation/cooperation.data";
 import Contact from "../../components/contact/contact.component";
+import { benefitsSizes } from "../../components/styleVars";
 
 const Bolt = () => {
   return (
@@ -18,7 +19,7 @@ const Bolt = () => {
       <Conditions data={CONDITIONS_DATA["bolt"]} />
       <How data={HOW_DATA["bolt"]} />
       <Contact title={"Skontaktuj się"} />
-      <Cooperation data={COOPERATION_DATA["bolt"]} />
+      <Cooperation size={benefitsSizes.big} data={COOPERATION_DATA["bolt"]} />
     </>
   );
 };

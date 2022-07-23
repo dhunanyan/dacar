@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const OurOfferWrapper = styled.section`
-  min-height: 800px;
+  min-height: 600px;
   background: linear-gradient(0deg, #393b44, #434c51);
   position: relative;
   overflow: hidden;

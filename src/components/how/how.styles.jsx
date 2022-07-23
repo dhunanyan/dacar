@@ -11,6 +11,7 @@ export const HowContainer = styled.div`
   margin: 0 auto;
   padding: 30px;
   position: relative;
+  overflow: hidden;
 `;
 
 export const HowContent = styled.div`

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { VscTriangleUp as Triangle } from "react-icons/vsc";
+
 import {
   HeaderContainer,
   HeaderDropDown,
@@ -17,14 +19,28 @@ import {
   HeaderNav,
   HeaderToggleIcon,
   HeaderToggleIconContainer,
+  HeaderDropDownButton,
   HeaderWrapper,
 } from "./header.styles";
 
 import logo from "../../assets/logoGreen.png";
 
-const Header = ({ contactRef }) => {
+const Header = () => {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const [isOfferOpen, setIsOfferOpen] = useState(false);
+  const [isWorkOpen, setIsWorkOpen] = useState(false);
+
+  const toggleWork = () => {
+    setIsOfferOpen(false);
+    setIsWorkOpen(!isWorkOpen);
+    console.log(isWorkOpen);
+  };
+
+  const toggleOffer = () => {
+    setIsWorkOpen(false);
+    setIsOfferOpen(!isOfferOpen);
+  };
 
   const changeHeaderBackground = () => {
     if (window.scrollY >= 110) {
@@ -59,14 +75,21 @@ const Header = ({ contactRef }) => {
             <span />
           </HeaderToggleIcon>
         </HeaderToggleIconContainer>
-        <HeaderNav>
-          <HeaderItemContainer>
-            <HeaderItem isDropDown={false}>
+        <HeaderNav isBurgerOpen={isBurgerOpen} isActive={isHeaderActive}>
+          <HeaderItemContainer isDropDownOpen={isWorkOpen}>
+            <HeaderItem>
               <HeaderLink to="/work">Praca</HeaderLink>
             </HeaderItem>
 
-            <HeaderDropDown isDropDown={true}>
-              <HeaderDropDownContainer>
+            <HeaderDropDownButton
+              isDropDownOpen={isWorkOpen}
+              onClick={toggleWork}
+            >
+              <Triangle />
+            </HeaderDropDownButton>
+
+            <HeaderDropDown isDropDownOpen={isWorkOpen}>
+              <HeaderDropDownContainer isDropDownOpen={isWorkOpen}>
                 <HeaderDropDownItem>
                   <HeaderDropDownLink to="/work/uber">
                     <span>Uber Kierowca</span>
@@ -86,13 +109,20 @@ const Header = ({ contactRef }) => {
             </HeaderDropDown>
           </HeaderItemContainer>
 
-          <HeaderItemContainer>
-            <HeaderItem isDropDown={false}>
+          <HeaderItemContainer isDropDownOpen={isOfferOpen}>
+            <HeaderItem>
               <HeaderLink to="/offer">Oferta</HeaderLink>
             </HeaderItem>
 
-            <HeaderDropDown isDropDown={true}>
-              <HeaderDropDownContainer>
+            <HeaderDropDownButton
+              isDropDownOpen={isOfferOpen}
+              onClick={toggleOffer}
+            >
+              <Triangle />
+            </HeaderDropDownButton>
+
+            <HeaderDropDown isDropDownOpen={isOfferOpen}>
+              <HeaderDropDownContainer isDropDownOpen={isOfferOpen}>
                 <HeaderDropDownItem>
                   <HeaderDropDownLink to="/offer/driver">
                     <span>Kierowca</span>
@@ -108,7 +138,7 @@ const Header = ({ contactRef }) => {
           </HeaderItemContainer>
 
           <HeaderItemContainer>
-            <HeaderItem isDropDown={false}>
+            <HeaderItem>
               <HeaderLinkScroll
                 activeClass="active"
                 spy={true}

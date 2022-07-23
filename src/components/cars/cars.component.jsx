@@ -3,16 +3,12 @@ import CarDetails from "../cars-car-details/cars-car-details.component";
 
 import { AnimatePresence } from "framer-motion";
 import Car from "../cars-car/cars-car.component";
-import {
-  CarsCards,
-  CarsContainer,
-  CarsTitle,
-  CarsWrapper,
-} from "./cars.styles";
+import { CarsCards, CarsContainer, CarsWrapper } from "./cars.styles";
 
 import CARS_DATA from "./cars.data";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
-const Cars = () => {
+const Cars = ({ title }) => {
   const [selectedCarIndex, setSelectedCarIndex] = useState(0);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const close = () => setDetailsOpen(false);
@@ -29,7 +25,7 @@ const Cars = () => {
   return (
     <CarsWrapper>
       <CarsContainer>
-        <CarsTitle>Kolekcja</CarsTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
         <CarsCards>
           {CARS_DATA.map((car, index) => (
             <Car

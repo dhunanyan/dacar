@@ -3,22 +3,21 @@ import React from "react";
 import {
   OurOfferCards,
   OurOfferContainer,
-  OurOfferTitle,
   OurOfferWrapper,
   BenefitsCircle1,
   BenefitsCircle2,
   BenefitsCircle3,
-  BenefitsCircle4,
 } from "./our-offer.styles";
 
 import OUR_OFFER_CARDS_DATA from "./our-offer.data";
 import OurOfferCard from "../our-offer-card/our-offer-card.component";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
-const OurOffer = () => {
+const OurOffer = ({ title }) => {
   return (
     <OurOfferWrapper>
       <OurOfferContainer>
-        <OurOfferTitle>Nasza Oferta</OurOfferTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
         <OurOfferCards>
           {OUR_OFFER_CARDS_DATA.map((card, index) => (
             <OurOfferCard

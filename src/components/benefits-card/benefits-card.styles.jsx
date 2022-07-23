@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const BenefitsCardContainer = styled.div`
   padding: 15px;
   width: calc(30% - 90px);
-  min-width: 285px;
+  min-width: ${({ size }) => size.minWidth};
   flex-grow: 100;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 400px;
+  height: ${({ size }) => size.height};
   background-color: red;
   margin: 15px;
   background: linear-gradient(
@@ -23,6 +23,12 @@ export const BenefitsCardContainer = styled.div`
   backdrop-filter: blur(12px);
   z-index: 1;
   text-align: center;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 30px);
+    min-width: 0;
+    margin: 15px 0;
+  }
 `;
 
 export const BenefitsCardIcon = styled.div`

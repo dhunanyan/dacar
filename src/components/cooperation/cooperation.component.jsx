@@ -1,26 +1,26 @@
 import React from "react";
 import BenefitsCard from "../benefits-card/benefits-card.component";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
 import {
   CooperationCards,
   CooperationCircle1,
-  CooperationCircle2,
   CooperationCircle3,
   CooperationCircle4,
   CooperationContainer,
-  CooperationTitle,
   CooperationWrapper,
 } from "./cooperation.styles";
 
-const Cooperation = ({ data }) => {
+const Cooperation = ({ data, size }) => {
   const { title, cardsList } = data;
   return (
     <CooperationWrapper>
       <CooperationContainer>
-        <CooperationTitle>{title}</CooperationTitle>
+        <BenefitsTitle>{title}</BenefitsTitle>
         <CooperationCards>
           {cardsList.map((card, index) => (
             <BenefitsCard
+              size={size}
               key={index}
               title={card.title}
               descr={card.descr}

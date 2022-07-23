@@ -4,6 +4,7 @@ export const WorksWrapper = styled.section`
   min-height: 800px;
   background: linear-gradient(0deg, #393b44, #434c51);
   position: relative;
+  overflow: hidden;
 `;
 
 export const WorksContainer = styled.div`

@@ -12,7 +12,7 @@ import {
   BenefitsWrapper,
 } from "./benefits.styles";
 
-const Benefits = ({ title, data }) => {
+const Benefits = ({ title, data, size }) => {
   return (
     <BenefitsWrapper>
       <BenefitsContainer>
@@ -20,6 +20,7 @@ const Benefits = ({ title, data }) => {
         <BenefitsCards>
           {data.map((card) => (
             <BenefitsCard
+              size={size}
               title={card.title}
               descr={card.descr}
               icon={card.icon}

@@ -5,6 +5,7 @@ export const CarsWrapper = styled.section`
   min-height: 800px;
   background: linear-gradient(0deg, #393b44, #434c51);
   position: relative;
+  overflow: hidden;
 `;
 
 export const CarsContainer = styled.div`

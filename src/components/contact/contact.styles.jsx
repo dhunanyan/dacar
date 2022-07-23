@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContactWrapper = styled.section`
   background: linear-gradient(0deg, #393b44, #737b84);
   position: relative;
+  overflow: hidden;
 `;
 export const ContactContainer = styled.div`
   max-width: 1300px;
@@ -35,6 +36,10 @@ export const ContactForm = styled.form`
   z-index: 1;
   text-align: center;
   padding: 10px 18px;
+
+  @media (max-width: 768px) {
+    min-width: calc(100% - 30px);
+  }
 `;
 
 export const ContactInput = styled.input`

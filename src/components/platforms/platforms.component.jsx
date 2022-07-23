@@ -1,10 +1,10 @@
 import React from "react";
+import { BenefitsTitle } from "../benefits/benefits.styles";
 
 import PLATFORMS_DATA from "./platforms.data";
 import {
   PlatformsCards,
   PlatformsContainer,
-  PlatformsTitle,
   PlatformsDescr,
   PlatformsWrapper,
   PlatformsCircle1,
@@ -16,16 +16,12 @@ import {
 const Platforms = () => {
   return (
     <PlatformsWrapper>
-      <PlatformsTitle>{PLATFORMS_DATA.title}</PlatformsTitle>
-
       <PlatformsContainer>
+        <BenefitsTitle>{PLATFORMS_DATA.title}</BenefitsTitle>
+
         <PlatformsCards>
-          {PLATFORMS_DATA.map((Platforms, index) => (
-            <PlatformsDescr
-              key={index}
-              Platforms={Platforms}
-              PlatformsIndex={index}
-            />
+          {PLATFORMS_DATA.descr.map((platformsDescr, index) => (
+            <PlatformsDescr key={index}>{platformsDescr}</PlatformsDescr>
           ))}
         </PlatformsCards>
 

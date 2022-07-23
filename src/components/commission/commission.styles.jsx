@@ -10,6 +10,7 @@ export const CommissionContainer = styled.div`
   background-color: rgba(54, 54, 54, 0.95);
   padding: 15px;
   margin: 0 0 auto 0;
+  overflow: hidden;
 `;
 
 export const CommissionTitle = styled.h3`

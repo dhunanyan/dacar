@@ -5,6 +5,7 @@ export const BenefitsWrapper = styled.section`
   min-height: 800px;
   background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
+  overflow: hidden;
 `;
 
 export const BenefitsContainer = styled.div`
@@ -22,7 +23,7 @@ export const BenefitsTitle = styled.h1`
   margin: 30px auto 45px auto;
   text-transform: uppercase;
   position: relative;
-  width: max-content;
+  max-width: max-content;
   z-index: 5;
 
   &:before {
