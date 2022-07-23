@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dacar/static/css/main.ddfc290f.css",
+    "main.js": "/dacar/static/js/main.838aa000.js",
+    "static/media/heroWork.jpg": "/dacar/static/media/heroWork.6199c68d68006fae2c14.jpg",
+    "static/media/rental.jpg": "/dacar/static/media/rental.1d3b36284cab1615e66d.jpg",
+    "static/media/heroFreeNow.jpg": "/dacar/static/media/heroFreeNow.b6dc60ca325d44ad6888.jpg",
+    "static/media/heroVehicles.jpg": "/dacar/static/media/heroVehicles.c9fdb8ab50b24d9f0ffe.jpg",
+    "static/media/worksBolt.jpg": "/dacar/static/media/worksBolt.823fbe36f7789bd9efbf.jpg",
+    "static/media/worksUber.jpg": "/dacar/static/media/worksUber.a8e39ef388e3c20003bb.jpg",
+    "static/media/heroUber.jpg": "/dacar/static/media/heroUber.308faae942ade1337cbb.jpg",
+    "static/media/worksFreenow.jpg": "/dacar/static/media/worksFreenow.48abf000649c6da6f6ef.jpg",
+    "static/media/heroBolt.png": "/dacar/static/media/heroBolt.1c8a7c27f7e211863174.png",
+    "static/media/heroOffer.jpg": "/dacar/static/media/heroOffer.160dec3b9ab6bd66cf2a.jpg",
+    "static/media/hero.jpg": "/dacar/static/media/hero.36f36f49884c670aa620.jpg",
+    "static/media/logoGreen.png": "/dacar/static/media/logoGreen.6fcd87d25106dad8ad39.png",
+    "index.html": "/dacar/index.html",
+    "main.ddfc290f.css.map": "/dacar/static/css/main.ddfc290f.css.map",
+    "main.838aa000.js.map": "/dacar/static/js/main.838aa000.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddfc290f.css",
+    "static/js/main.838aa000.js"
+  ]
+}
