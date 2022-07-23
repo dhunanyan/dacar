@@ -54,7 +54,7 @@ const Header = () => {
   return (
     <HeaderWrapper isActive={isHeaderActive}>
       <HeaderContainer isActive={isHeaderActive}>
-        <HeaderLogoContainer to="/">
+        <HeaderLogoContainer to="/dacar">
           <HeaderLogo>
             <HeaderImg>
               <img src={logo} alt="Logo" />
@@ -78,7 +78,7 @@ const Header = () => {
         <HeaderNav isBurgerOpen={isBurgerOpen} isActive={isHeaderActive}>
           <HeaderItemContainer isDropDownOpen={isWorkOpen}>
             <HeaderItem>
-              <HeaderLink to="/work">Praca</HeaderLink>
+              <HeaderLink to="/dacar/work">Praca</HeaderLink>
             </HeaderItem>
 
             <HeaderDropDownButton
@@ -91,17 +91,17 @@ const Header = () => {
             <HeaderDropDown isDropDownOpen={isWorkOpen}>
               <HeaderDropDownContainer isDropDownOpen={isWorkOpen}>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/work/uber">
+                  <HeaderDropDownLink to="/dacar/work/uber">
                     <span>Uber Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/work/bolt">
+                  <HeaderDropDownLink to="/dacar/work/bolt">
                     <span>Bolt Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/work/free-now">
+                  <HeaderDropDownLink to="/dacar/work/free-now">
                     <span>FreeNow Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
@@ -111,7 +111,7 @@ const Header = () => {
 
           <HeaderItemContainer isDropDownOpen={isOfferOpen}>
             <HeaderItem>
-              <HeaderLink to="/offer">Oferta</HeaderLink>
+              <HeaderLink to="/dacar/offer">Oferta</HeaderLink>
             </HeaderItem>
 
             <HeaderDropDownButton
@@ -124,12 +124,12 @@ const Header = () => {
             <HeaderDropDown isDropDownOpen={isOfferOpen}>
               <HeaderDropDownContainer isDropDownOpen={isOfferOpen}>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/offer/driver">
+                  <HeaderDropDownLink to="/dacar/offer/driver">
                     <span>Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/offer/vehicles">
+                  <HeaderDropDownLink to="/dacar/offer/vehicles">
                     <span>Pojazdy</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>

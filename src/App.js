@@ -16,14 +16,14 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/offer" element={<Offer />} />
-        <Route exact path="/offer/vehicles" element={<Vehicles />} />
-        <Route exact path="/offer/driver" element={<Vehicles />} />
-        <Route exact path="/work" element={<Work />} />
-        <Route exact path="/work/uber" element={<Uber />} />
-        <Route exact path="/work/bolt" element={<Bolt />} />
-        <Route exact path="/work/free-now" element={<FreeNow />} />
+        <Route exact path="/dacar" element={<Home />} />
+        <Route exact path="/dacar/offer" element={<Offer />} />
+        <Route exact path="/dacar/offer/vehicles" element={<Vehicles />} />
+        <Route exact path="/dacardacar/offer/driver" element={<Vehicles />} />
+        <Route exact path="/dacar/work" element={<Work />} />
+        <Route exact path="/dacar/work/uber" element={<Uber />} />
+        <Route exact path="/dacar/work/bolt" element={<Bolt />} />
+        <Route exact path="/dacar/work/free-now" element={<FreeNow />} />
       </Routes>
       <Footer />
     </>

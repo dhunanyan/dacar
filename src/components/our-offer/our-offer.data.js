@@ -4,7 +4,7 @@ import rental from "../../assets/rental.jpg";
 const OUR_OFFER_CARDS_DATA = [
   {
     id: 1,
-    url: "/offer/driver",
+    url: "/dacar/offer/driver",
     name: "driver",
     title: "Kierowca",
     descr:
@@ -14,7 +14,7 @@ const OUR_OFFER_CARDS_DATA = [
   {
     id: 2,
     name: "rental",
-    url: "/offer/vehicles",
+    url: "/dacar/offer/vehicles",
     title: "Wynajem samochodów",
     descr:
       "Chcesz pracować jako kierowca taksówki, lecz nie posiadasz własnego pojazdu? Wynajmij u nas przystosowany do pracy samochód i zarabiaj jako kierowca taxi już dziś!",

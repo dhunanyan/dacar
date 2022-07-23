@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterContainer>
-        <FooterLogoContainer to="/">
+        <FooterLogoContainer to="/dacar">
           <FooterLogo>
             <FooterImg>
               <img src={logo} alt="Logo" />
@@ -33,9 +33,9 @@ const Footer = () => {
         </FooterLogoContainer>
 
         <FooterMenu>
-          <FooterLink to="/work">Praca</FooterLink>
-          <FooterLink to="/offer">Oferta</FooterLink>
-          <FooterLink to="/contact">Kontakt</FooterLink>
+          <FooterLink to="/dacar/work">Praca</FooterLink>
+          <FooterLink to="/dacar/offer">Oferta</FooterLink>
+          <FooterLink to="/dacar/contact">Kontakt</FooterLink>
         </FooterMenu>
 
         <FooterAuthor>
