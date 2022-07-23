@@ -30,8 +30,10 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   transition: all 250ms ease-out;
+
   @media (max-width: 768px) {
-    padding: 5px 30px;
+    padding: 5px 15px;
+    width: calc(100% - 30px);
   }
 `;
 
@@ -57,6 +59,17 @@ export const HeaderLogoContainer = styled(Link)`
         }
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    transform: scale(0.7);
+    transform-origin: left center;
+    margin: 0 auto 0 0;
+    min-width: 0;
+  }
+
+  @media (max-width: 450px) {
+    transform: scale(0.65);
   }
 `;
 
@@ -100,6 +113,8 @@ export const HeaderLogoTitle = styled.p`
 `;
 
 export const HeaderToggleIconContainer = styled.button`
+  min-width: 40px;
+  min-height: 40px;
   width: 40px;
   height: 40px;
   margin: 8px;
@@ -362,6 +377,7 @@ export const HeaderDropDown = styled.div`
   }
 
   @media (max-width: 768px) {
+    margin: 15px 0 0 0;
     min-width: calc(100% - 65px);
     position: static;
     opacity: 1;
