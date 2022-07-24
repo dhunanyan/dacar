@@ -2,14 +2,22 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
 
+const apiKey = process.env.REACT_APP_FIREBASE_API_KEY;
+const authDomain = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN;
+const projectId = process.env.REACT_APP_FIREBASE_PROJECT_ID;
+const storageBucket = process.env.REACT_APP_FIREBASE_STORAGE_BUCKET;
+const messagingSenderId = process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID;
+const appId = process.env.REACT_APP_FIREBASE_APP_ID;
+const measurementId = process.env.REACT_APP_FIREBASE_MEASUREMENT_ID;
+
 const config = {
-  apiKey: "AIzaSyA6J5cRsKAHlt85KSGUswERW3wJn5W5e1I",
-  authDomain: "dacar-services.firebaseapp.com",
-  projectId: "dacar-services",
-  storageBucket: "dacar-services.appspot.com",
-  messagingSenderId: "45131422448",
-  appId: "1:45131422448:web:aebf7c8e42224cd1db0035",
-  measurementId: "G-L5LGY6WCPE",
+  apiKey: apiKey,
+  authDomain: authDomain,
+  projectId: projectId,
+  storageBucket: storageBucket,
+  messagingSenderId: messagingSenderId,
+  appId: appId,
+  measurementId: measurementId,
 };
 
 export const initApp = firebase.initializeApp(config);
@@ -89,6 +97,5 @@ export const firestore = firebase.firestore();
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: "select_account" });
-export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;

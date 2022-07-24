@@ -11,6 +11,11 @@ export const CommissionContainer = styled.div`
   padding: 15px;
   margin: 0 0 auto 0;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 30px);
+    min-width: 200px;
+  }
 `;
 
 export const CommissionTitle = styled.h3`

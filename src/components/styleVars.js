@@ -5,7 +5,7 @@ export const benefitsSizes = {
   },
   medium: {},
   big: {
-    height: "310px",
-    minWidth: "350px",
+    height: "380px",
+    minWidth: "360px",
   },
 };

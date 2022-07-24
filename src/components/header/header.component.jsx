@@ -31,10 +31,24 @@ const Header = () => {
   const [isOfferOpen, setIsOfferOpen] = useState(false);
   const [isWorkOpen, setIsWorkOpen] = useState(false);
 
+  const closeMenuAndDropDowns = () => {
+    setIsBurgerOpen(false);
+    setIsOfferOpen(false);
+    setIsWorkOpen(false);
+    document.body.style.overflow = "unset";
+  };
+
+  const toggleBodyLock = () => {
+    if (!isBurgerOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  };
+
   const toggleWork = () => {
     setIsOfferOpen(false);
     setIsWorkOpen(!isWorkOpen);
-    console.log(isWorkOpen);
   };
 
   const toggleOffer = () => {
@@ -54,7 +68,10 @@ const Header = () => {
   return (
     <HeaderWrapper isActive={isHeaderActive}>
       <HeaderContainer isActive={isHeaderActive}>
-        <HeaderLogoContainer to="/dacar">
+        <HeaderLogoContainer
+          to="/dacar"
+          onClick={() => closeMenuAndDropDowns()}
+        >
           <HeaderLogo>
             <HeaderImg>
               <img src={logo} alt="Logo" />
@@ -67,7 +84,10 @@ const Header = () => {
         </HeaderLogoContainer>
 
         <HeaderToggleIconContainer
-          onClick={() => setIsBurgerOpen(!isBurgerOpen)}
+          onClick={() => {
+            setIsBurgerOpen(!isBurgerOpen);
+            toggleBodyLock();
+          }}
         >
           <HeaderToggleIcon isBurgerOpen={isBurgerOpen}>
             <span />
@@ -78,7 +98,12 @@ const Header = () => {
         <HeaderNav isBurgerOpen={isBurgerOpen} isActive={isHeaderActive}>
           <HeaderItemContainer isDropDownOpen={isWorkOpen}>
             <HeaderItem>
-              <HeaderLink to="/dacar/work">Praca</HeaderLink>
+              <HeaderLink
+                to="/dacar/work"
+                onClick={() => closeMenuAndDropDowns()}
+              >
+                Praca
+              </HeaderLink>
             </HeaderItem>
 
             <HeaderDropDownButton
@@ -91,17 +116,26 @@ const Header = () => {
             <HeaderDropDown isDropDownOpen={isWorkOpen}>
               <HeaderDropDownContainer isDropDownOpen={isWorkOpen}>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/dacar/work/uber">
+                  <HeaderDropDownLink
+                    to="/dacar/work/uber"
+                    onClick={() => closeMenuAndDropDowns()}
+                  >
                     <span>Uber Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/dacar/work/bolt">
+                  <HeaderDropDownLink
+                    to="/dacar/work/bolt"
+                    onClick={() => closeMenuAndDropDowns()}
+                  >
                     <span>Bolt Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/dacar/work/free-now">
+                  <HeaderDropDownLink
+                    to="/dacar/work/free-now"
+                    onClick={() => closeMenuAndDropDowns()}
+                  >
                     <span>FreeNow Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
@@ -111,7 +145,12 @@ const Header = () => {
 
           <HeaderItemContainer isDropDownOpen={isOfferOpen}>
             <HeaderItem>
-              <HeaderLink to="/dacar/offer">Oferta</HeaderLink>
+              <HeaderLink
+                to="/dacar/offer"
+                onClick={() => closeMenuAndDropDowns()}
+              >
+                Oferta
+              </HeaderLink>
             </HeaderItem>
 
             <HeaderDropDownButton
@@ -124,12 +163,18 @@ const Header = () => {
             <HeaderDropDown isDropDownOpen={isOfferOpen}>
               <HeaderDropDownContainer isDropDownOpen={isOfferOpen}>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/dacar/offer/driver">
+                  <HeaderDropDownLink
+                    to="/dacar/offer/driver"
+                    onClick={() => closeMenuAndDropDowns()}
+                  >
                     <span>Kierowca</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
                 <HeaderDropDownItem>
-                  <HeaderDropDownLink to="/dacar/offer/vehicles">
+                  <HeaderDropDownLink
+                    to="/dacar/offer/vehicles"
+                    onClick={() => closeMenuAndDropDowns()}
+                  >
                     <span>Pojazdy</span>
                   </HeaderDropDownLink>
                 </HeaderDropDownItem>
@@ -140,6 +185,7 @@ const Header = () => {
           <HeaderItemContainer>
             <HeaderItem>
               <HeaderLinkScroll
+                onClick={() => closeMenuAndDropDowns()}
                 activeClass="active"
                 spy={true}
                 smooth={true}

@@ -4,6 +4,11 @@ export const CooperationWrapper = styled.section`
   min-height: 800px;
   background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const CooperationContainer = styled.div`
@@ -11,6 +16,11 @@ export const CooperationContainer = styled.div`
   margin: 0 auto;
   padding: 30px;
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const CooperationTitle = styled.h1`

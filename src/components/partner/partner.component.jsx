@@ -33,7 +33,7 @@ const Partner = ({ data }) => {
             <Commission />
 
             <PartnerButton>
-              ZAREJESTRUJ SIĘ
+              SKONTAKTUJ SIĘ
               <div>
                 <img src={logo} alt="Logo" />
               </div>

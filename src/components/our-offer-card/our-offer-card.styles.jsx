@@ -12,7 +12,7 @@ export const OurOfferCardContainer = styled.div`
   justify-content: flex-start;
   min-height: 330px;
   background-color: red;
-  margin: 15px;
+  margin: 0 15px;
   background: linear-gradient(
     to left top,
     rgba(248, 248, 248, 0.5),
@@ -23,6 +23,28 @@ export const OurOfferCardContainer = styled.div`
   backdrop-filter: blur(12px);
   z-index: 1;
   text-align: center;
+
+  @media (max-width: 768px) {
+    &:first-of-type {
+      margin: 0 0 0 0;
+    }
+
+    &:last-of-type {
+      margin: 0 0 0 15px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    width: calc(100% - 30px);
+
+    &:first-of-type {
+      margin: 0 0 15px 0;
+    }
+
+    &:last-of-type {
+      margin: 0 0 0 0;
+    }
+  }
 `;
 
 export const OurOfferCardImg = styled.div`

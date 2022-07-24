@@ -9,4 +9,17 @@ export const SectionQueries = css`
       height: 3px;
     }
   }
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 28px;
+
+    &:before {
+      width: 80px;
+      height: 3px;
+    }
+  }
 `;

@@ -28,6 +28,7 @@ export const BenefitsCardContainer = styled.div`
     width: calc(100% - 30px);
     min-width: 0;
     margin: 15px 0;
+    height: max-content;
   }
 `;
 

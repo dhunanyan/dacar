@@ -13,6 +13,7 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 export const ContactForm = styled.form`
@@ -96,7 +97,7 @@ export const ContactButton = styled.button`
   box-shadow: 6px 6px 20px rgba(48, 48, 48, 0.2);
   backdrop-filter: blur(12px);
   padding: 12px 30px;
-  margin: 25px 0 0 0;
+  margin: 25px 0 8px 0;
   justify-self: flex-end;
   font-size: 18px;
   font-weight: 600;

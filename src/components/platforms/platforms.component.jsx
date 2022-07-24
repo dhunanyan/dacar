@@ -11,7 +11,14 @@ import {
   PlatformsCircle2,
   PlatformsCircle3,
   PlatformsCircle4,
+  PlatformsCardsContainer,
+  PlatformsImages,
+  PlatformsImage,
 } from "./platforms.styles";
+
+import boltLogo from "../../assets/boltLogo.jpg";
+import uberLogo from "../../assets/uberLogo.png";
+import freenowLogo from "../../assets/freenowLogo.png";
 
 const Platforms = () => {
   return (
@@ -20,9 +27,23 @@ const Platforms = () => {
         <BenefitsTitle>{PLATFORMS_DATA.title}</BenefitsTitle>
 
         <PlatformsCards>
-          {PLATFORMS_DATA.descr.map((platformsDescr, index) => (
-            <PlatformsDescr key={index}>{platformsDescr}</PlatformsDescr>
-          ))}
+          <PlatformsCardsContainer>
+            {PLATFORMS_DATA.descr.map((platformsDescr, index) => (
+              <PlatformsDescr key={index}>{platformsDescr}</PlatformsDescr>
+            ))}
+          </PlatformsCardsContainer>
+
+          <PlatformsImages>
+            <PlatformsImage>
+              <img src={boltLogo} alt="Bolt Logo" />
+            </PlatformsImage>
+            <PlatformsImage>
+              <img src={uberLogo} alt="Uber Logo" />
+            </PlatformsImage>
+            <PlatformsImage>
+              <img src={freenowLogo} alt="FreeNow Logo" />
+            </PlatformsImage>
+          </PlatformsImages>
         </PlatformsCards>
 
         <PlatformsCircle1 />

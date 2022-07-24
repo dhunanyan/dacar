@@ -24,7 +24,7 @@ const WORKS_DATA = [
     name: "free-now",
     title: "FreeNow Kierowca",
     descr:
-      "Szukasz alternatywy lub uzupełnienia dla Bolt lub Uber? Pracuj jako kierowca Taxi – Warszawa, Kraków, Gdańsk, Gdynia, Sopot, Katowice, GOP, Poznań, Łódź i Wrocław. Niskie prowizje, kursy po drodze, kolejki lotniskowe i wiele więcej innowacyjnych rozwiązań w aplikacji! Zarejestruj się, wypełnij dokumenty i wykorzystaj swój samochód do zarabiania.",
+      "Szukasz alternatywy lub uzupełnienia dla Bolt lub Uber? Pracuj jako kierowca Taxi – Warszawa, Kraków, Gdańsk, Gdynia, Sopot, Katowice, GOP, Poznań, Łódź i Wrocław. Niskie prowizje, kursy po drodze, kolejki lotniskowe i wiele więcej innowacyjnych rozwiązań w aplikacji! SKONTAKTUJ SIĘ, wypełnij dokumenty i wykorzystaj swój samochód do zarabiania.",
     image: worksFreenow,
   },
 ];

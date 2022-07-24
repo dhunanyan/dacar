@@ -23,6 +23,11 @@ export const FooterContainer = styled.div`
   @media (max-width: 990px) {
     flex-direction: column;
   }
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const FooterLogoContainer = styled(Link)`
@@ -110,6 +115,10 @@ export const FooterLink = styled(Link)`
   &:hover {
     color: #f1f1f1;
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `;
 

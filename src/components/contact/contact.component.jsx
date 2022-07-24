@@ -90,12 +90,12 @@ const Contact = ({ title, contactRef }) => {
           />
           <ContactButton type="submit">Wyślij wiadomość</ContactButton>
         </ContactForm>
-      </ContactContainer>
 
-      <BenefitsCircle1 />
-      <BenefitsCircle2 />
-      <BenefitsCircle3 />
-      <BenefitsCircle4 />
+        <BenefitsCircle1 />
+        <BenefitsCircle2 />
+        <BenefitsCircle3 />
+        <BenefitsCircle4 />
+      </ContactContainer>
     </ContactWrapper>
   );
 };

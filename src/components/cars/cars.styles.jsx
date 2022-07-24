@@ -6,6 +6,10 @@ export const CarsWrapper = styled.section`
   background: linear-gradient(0deg, #393b44, #434c51);
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const CarsContainer = styled.div`

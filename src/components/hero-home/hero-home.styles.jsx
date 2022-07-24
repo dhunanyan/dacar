@@ -7,10 +7,19 @@ export const HeroWrapper = styled.section`
   background-repeat: repeat;
   min-height: 900px;
   padding: 106px 0 0 0;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const HeroContainer = styled.div`
   padding: 30px;
   max-width: 1300px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;

@@ -5,6 +5,10 @@ export const PlatformsWrapper = styled.section`
   background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const PlatformsContainer = styled.div`
@@ -12,6 +16,11 @@ export const PlatformsContainer = styled.div`
   margin: 0 auto;
   padding: 30px;
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const PlatformsTitle = styled.h1`
@@ -23,7 +32,7 @@ export const PlatformsTitle = styled.h1`
   text-transform: uppercase;
   position: relative;
   width: max-content;
-  z-index: 1;
+  z-index: 2;
 
   &:before {
     content: "";
@@ -40,14 +49,72 @@ export const PlatformsTitle = styled.h1`
 
 export const PlatformsCards = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  background: linear-gradient(
+    to left top,
+    rgba(248, 248, 248, 0.5),
+    rgba(248, 248, 248, 0.7)
+  );
+  border-radius: 20px;
+  box-shadow: 6px 6px 20px rgba(48, 48, 48, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 15px;
+  color: #515151;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 `;
 
-export const PlatformsDescr = styled.p`
+export const PlatformsCardsContainer = styled.ul`
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  margin: 0 25px 0 0;
+
+  @media (max-width: 550px) {
+    margin: 0 0 25px 0;
+  }
+`;
+
+export const PlatformsImages = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 550px) {
+    flex-direction: row;
+  }
+`;
+
+export const PlatformsImage = styled.div`
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: 5px 0;
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 550px) {
+    margin: 0 5px;
+  }
+
+  @media (max-width: 350px) {
+    width: 65px;
+    height: 65px;
+  }
+`;
+
+export const PlatformsDescr = styled.li`
   font-size: 16px;
+  margin: 5px 0;
 `;
 
 const PlatformsCircle = css`

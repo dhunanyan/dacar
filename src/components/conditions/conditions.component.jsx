@@ -54,7 +54,7 @@ const Conditions = ({ data }) => {
             <Commission />
 
             <ConditionsButton>
-              ZAREJESTRUJ SIĘ
+              SKONTAKTUJ SIĘ
               <div>
                 <img src={logo} alt="Logo" />
               </div>

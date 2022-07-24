@@ -7,6 +7,10 @@ export const HeroWrapper = styled.section`
   background-repeat: repeat;
   min-height: 700px;
   padding: 106px 0 0 0;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const HeroContainer = styled.div`

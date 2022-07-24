@@ -6,6 +6,10 @@ export const BenefitsWrapper = styled.section`
   background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const BenefitsContainer = styled.div`
@@ -13,6 +17,11 @@ export const BenefitsContainer = styled.div`
   margin: 0 auto;
   padding: 30px;
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const BenefitsTitle = styled.h1`
@@ -62,16 +71,16 @@ const BenefitsCircle = css`
 
 export const BenefitsCircle1 = styled.div`
   ${BenefitsCircle}
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   top: 140px;
   left: 70px;
 `;
 
 export const BenefitsCircle2 = styled.div`
   ${BenefitsCircle}
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   bottom: 300px;
   right: 200px;
 `;
@@ -86,8 +95,8 @@ export const BenefitsCircle3 = styled.div`
 
 export const BenefitsCircle4 = styled.div`
   ${BenefitsCircle}
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   left: 300px;
   bottom: 20px;
 `;

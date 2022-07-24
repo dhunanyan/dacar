@@ -15,6 +15,11 @@ export const HeroContent = styled.div`
   backdrop-filter: blur(16px);
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.3);
   max-width: 350px;
+
+  @media (max-width: 768px) {
+    margin: 0px 0 0 0;
+    padding: 15px;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -111,5 +116,10 @@ export const HeroButton = styled.button`
     100% {
       transform: scale(1.3) rotate(0deg);
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 6px 15px;
+    font-size: 16px;
   }
 `;

@@ -4,7 +4,7 @@ const HOW_DATA = {
     list: [
       {
         id: 1,
-        subtitle: "ZAREJESTRUJ SIĘ W PANELU KIEROWCY",
+        subtitle: "SKONTAKTUJ SIĘ W PANELU KIEROWCY",
         descr: "Załóż konto na stronie  Dacar Partner.",
         subList: [],
         url: "",
@@ -55,7 +55,7 @@ const HOW_DATA = {
     list: [
       {
         id: 1,
-        subtitle: "ZAREJESTRUJ SIĘ W PANELU KIEROWCY",
+        subtitle: "SKONTAKTUJ SIĘ W PANELU KIEROWCY",
         descr:
           "Zacznij od rejestracji na stronie Dacar Partner i wypełnij wszystkie swoje dane.",
         subList: [],
@@ -124,7 +124,7 @@ const HOW_DATA = {
     list: [
       {
         id: 1,
-        subtitle: "ZAREJESTRUJ SIĘ",
+        subtitle: "SKONTAKTUJ SIĘ",
         descr:
           "Zacznij od rejestracji na stronie Dacar Partner i wypełnij wszystkie swoje dane.",
         subList: [],

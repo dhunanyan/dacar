@@ -4,7 +4,7 @@ const PARTNER_DATA = {
     name: "uber",
     title: "Uber Partner",
     descr: [
-      "Zacznij pracę jako kierowca w najbardziej znanej firmie transportowej, która działa w setkach miast na całym świecie! Uber działa w Polsce od 2015 roku w miastach, takich jak Warszawa, Poznań, Kraków, Wrocław, Łódź, Gdańsk, Gdynia, Sopot oraz Aglomeracja Śląska. Wykorzystaj swój samochód i zarabiaj nawet 30 zł na godzinę w swoim mieście. Otrzymasz od 2 do 3 zleceń na godzinę, co gwarantuje Ci odpowiednio wysoką wypłatę. Przelewy dostaniesz nawet co tydzień. Dla naszych kierowców oferujemy wszelką pomoc związaną z rozpoczęciem pracy i przygotowaniem wszystkich dokumentów – pomagamy także uzyskać licencję taxi. Zarejestruj się, aby rozpocząć współpracę i zostać kierowcą!",
+      "Zacznij pracę jako kierowca w najbardziej znanej firmie transportowej, która działa w setkach miast na całym świecie! Uber działa w Polsce od 2015 roku w miastach, takich jak Warszawa, Poznań, Kraków, Wrocław, Łódź, Gdańsk, Gdynia, Sopot oraz Aglomeracja Śląska. Wykorzystaj swój samochód i zarabiaj nawet 30 zł na godzinę w swoim mieście. Otrzymasz od 2 do 3 zleceń na godzinę, co gwarantuje Ci odpowiednio wysoką wypłatę. Przelewy dostaniesz nawet co tydzień. Dla naszych kierowców oferujemy wszelką pomoc związaną z rozpoczęciem pracy i przygotowaniem wszystkich dokumentów – pomagamy także uzyskać licencję taxi. SKONTAKTUJ SIĘ, aby rozpocząć współpracę i zostać kierowcą!",
     ],
   },
 

@@ -5,6 +5,10 @@ export const ConditionsWrapper = styled.section`
   background: linear-gradient(0deg, #393b44, #737b84);
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const ConditionsContainer = styled.div`
@@ -14,6 +18,11 @@ export const ConditionsContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const ConditionsContent = styled.div`
@@ -27,6 +36,12 @@ export const ConditionsContent = styled.div`
   padding: 30px;
   border-radius: 10px;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const ConditionsContentInner = styled.div`
@@ -84,6 +99,11 @@ export const ConditionsList = styled.ul`
   flex-direction: column;
   margin: 0 0 0 30px;
   order: 1;
+
+  @media (max-width: 768px) {
+    order: 0;
+    margin: 0 0 15px 0;
+  }
 `;
 
 export const ConditionsItem = styled.li`
@@ -178,7 +198,7 @@ export const ConditionsButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 0 auto;
+    margin: 0 0 0 10px;
 
     img {
       width: 100%;
@@ -197,5 +217,16 @@ export const ConditionsButton = styled.button`
     100% {
       transform: scale(1.3) rotate(0deg);
     }
+  }
+
+  @media (max-width: 768px) {
+    margin: 15px 0 0;
+    padding: 6px 15px;
+    font-size: 16px;
+    width: auto;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
   }
 `;

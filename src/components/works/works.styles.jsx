@@ -5,6 +5,10 @@ export const WorksWrapper = styled.section`
   background: linear-gradient(0deg, #393b44, #434c51);
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const WorksContainer = styled.div`
@@ -12,6 +16,11 @@ export const WorksContainer = styled.div`
   margin: 0 auto;
   padding: 30px;
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const WorksTitle = styled.h1`

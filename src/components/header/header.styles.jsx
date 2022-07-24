@@ -32,7 +32,7 @@ export const HeaderContainer = styled.div`
   transition: all 250ms ease-out;
 
   @media (max-width: 768px) {
-    padding: 5px 15px;
+    padding: 15px;
     width: calc(100% - 30px);
   }
 `;
@@ -118,13 +118,13 @@ export const HeaderToggleIconContainer = styled.button`
   width: 40px;
   height: 40px;
   margin: 8px;
-  border-radius: 5px;
+  border-radius: 6px;
   box-shadow: -1px 3px 5px -3px rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(12px);
   background: linear-gradient(
     to left top,
-    rgba(248, 248, 248, 0.3),
-    rgba(248, 248, 248, 0.5)
+    rgba(110, 110, 110, 0.3),
+    rgba(64, 64, 64, 0.5)
   );
   cursor: pointer;
   padding: 5px;
@@ -133,6 +133,7 @@ export const HeaderToggleIconContainer = styled.button`
 
   @media (max-width: 768px) {
     display: block;
+    margin: 0;
   }
 `;
 
@@ -201,7 +202,7 @@ export const HeaderToggleIcon = styled.div`
   transition: all 150ms ease-out;
 
   span {
-    background: linear-gradient(135deg, #292929, #292929);
+    background: linear-gradient(135deg, #ededed, #ededed);
     height: 6px;
     border-radius: 5px;
     display: block;
@@ -438,34 +439,18 @@ export const HeaderDropDownItem = styled.li`
 `;
 
 export const HeaderDropDownLink = styled(Link)`
-  color: #ededed;
+  color: #bababa;
   font-size: 20px;
   font-weight: 700;
   padding: 15px;
   min-width: calc(100% - 30px);
+  transition: all 100ms ease-out;
 
   &:hover {
-    span {
-      &::before {
-        width: 100%;
-      }
-    }
+    color: #f1f1f1;
   }
-  span {
-    position: relative;
-    min-width: max-content;
-    width: 100%;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      height: 4px;
-      width: 0%;
-      background: linear-gradient(135deg, #74d680, #67a26f);
-      transition: all 120ms linear;
-      border-radius: 1px;
-    }
+  @media (max-width: 768px) {
+    color: #f1f1f1;
   }
 `;

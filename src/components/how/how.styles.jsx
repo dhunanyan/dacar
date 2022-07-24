@@ -4,6 +4,10 @@ export const HowWrapper = styled.section`
   min-height: 800px;
   background: linear-gradient(180deg, #393b44, #737b84);
   position: relative;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 `;
 
 export const HowContainer = styled.div`
@@ -12,6 +16,11 @@ export const HowContainer = styled.div`
   padding: 30px;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const HowContent = styled.div`
@@ -26,6 +35,12 @@ export const HowContent = styled.div`
   border-radius: 10px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
 `;
 
 export const HowTitle = styled.h1`
@@ -92,6 +107,27 @@ export const HowItem = styled.li`
   &:last-of-type {
     margin: 0 0 0px 80px;
   }
+
+  @media (max-width: 768px) {
+    margin: 0 0 20px 50px;
+
+    &:last-of-type {
+      margin: 0 0 0px 50px;
+    }
+
+    &:before {
+      left: -62px;
+      top: 0;
+      transform: scale(0.8);
+      transform-origin: left right;
+    }
+
+    &:hover {
+      &:before {
+        transform: scale(0.85) translate(0, -10px) rotate(-340deg);
+      }
+    }
+  }
 `;
 
 export const HowSubItem = styled.li`
@@ -128,6 +164,16 @@ export const HowSubItem = styled.li`
 
   :first-of-type {
     margin: 14px 0 7px 0px;
+  }
+
+  @media (max-width: 768px) {
+    span {
+      margin: 0 0 0 0px;
+
+      &:before {
+        left: -30px;
+      }
+    }
   }
 `;
 

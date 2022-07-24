@@ -13,6 +13,12 @@ export const WorksWorkContainer = styled.div`
     rgba(248, 248, 248, 0.9)
   );
   margin: 20px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    min-height: 300px;
+  }
 `;
 
 export const WorksWorkImage = styled.div`
@@ -21,6 +27,11 @@ export const WorksWorkImage = styled.div`
   height: 160px;
   border-radius: 10px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 0 0 15px 0;
+  }
 
   img {
     width: 100%;
@@ -32,6 +43,10 @@ export const WorksWorkContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin: 0 0 0 15px;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const WorksWorkTitle = styled.h2`
@@ -80,5 +95,15 @@ export const WorksWorkButton = styled(Link)`
     img {
       width: 100%;
     }
+  }
+  @media (max-width: 768px) {
+    padding: 6px 15px;
+    font-size: 16px;
+    width: auto;
+    margin: 15px 0 0 auto;
+  }
+
+  @media (max-width: 450px) {
+    margin: 15px 0 0 0;
   }
 `;
